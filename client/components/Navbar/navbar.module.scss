@@ -1,0 +1,98 @@
+@import "../../app/variables";
+
+.container {
+  .main {
+    width: 100%;
+    height: fit-content;
+    min-height: 76px;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: $ALPHA_BLACK_03;
+    color: $MAIN_WHITE;
+
+    ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2.5rem;
+
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        cursor: pointer;
+      }
+    }
+
+    .category {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 30px;
+      letter-spacing: 0.1em;
+    }
+
+    .search {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+
+      .search_area {
+        height: 3rem;
+        padding: 0 1rem;
+        border: 1px solid $ALPHA_WHITE_01;
+        background-color: transparent;
+
+        input {
+          outline: none;
+          border: none;
+          height: 100%;
+          padding: 0.75rem 0;
+          background-color: transparent;
+          color: $MAIN_WHITE;
+
+          &::placeholder {
+            color: $ALPHA_WHITE_05;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 20px;
+          }
+        }
+
+        .divider {
+          transform: rotate(90deg);
+          color: $ALPHA_WHITE_03;
+        }
+
+        .icon {
+          cursor: pointer;
+          width: 18px;
+          height: 18px;
+        }
+      }
+
+      .login_btn {
+        button {
+          max-width: 400px;
+          padding: 12px 24px;
+          font-size: 18px;
+          font-weight: 600;
+          line-height: 24px;
+          cursor: pointer;
+          border: 1px solid $GRAY_COOL;
+        }
+      }
+    }
+  }
+}

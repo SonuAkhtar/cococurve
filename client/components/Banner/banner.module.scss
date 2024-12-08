@@ -1,0 +1,14 @@
+@import "../../app/variables";
+
+.container {
+  background-color: $MAIN_PURPLE;
+  color: $MAIN_WHITE;
+  padding: 0.5rem 0;
+}
+
+.wrapper {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+  text-align: center;
+}

@@ -1,0 +1,84 @@
+@import "../../app/variables";
+
+.container {
+  background-color: $MAIN_BLACK;
+  color: $MAIN_WHITE;
+  padding: 4rem 5rem;
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .footer_top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .links {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2.5rem;
+
+        li {
+          list-style: none;
+          cursor: pointer;
+        }
+      }
+
+      .social {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2.5rem;
+
+        svg {
+          height: 1.5rem;
+          width: 1.5rem;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .divider {
+      width: 100%;
+      height: 1px;
+      background-color: $GRAY_COOL_800;
+    }
+
+    .footer_bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .copyright {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        color: $GRAY_COOL_500;
+      }
+
+      .logo {
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 30px;
+      }
+
+      .terms {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 20px;
+        letter-spacing: 0.08em;
+
+        span {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
