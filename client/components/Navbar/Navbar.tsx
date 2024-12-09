@@ -12,10 +12,14 @@ import styles from "./navbar.module.scss";
 // components
 import Banner from "../Banner/Banner";
 
+const bannerText: string =
+  "USE FIRST15 TO GET 15% DISCOUNT ON YOUR FIRST ORDER";
+
 const Navbar = () => {
   return (
     <div className={styles.container}>
-      <Banner />
+      <Banner text={bannerText} />
+
       <main className={styles.main}>
         <nav className={styles.category}>
           <ul>

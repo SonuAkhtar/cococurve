@@ -1,0 +1,12 @@
+@import "../../app/variables";
+
+.container {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  padding: 16px 40px;
+  background-color: $MAIN_WHITE;
+  color: $GRAY_COOL_900;
+  border: 1px solid $GRAY_COOL_200;
+  cursor: pointer;
+}
