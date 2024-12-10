@@ -1,3 +1,4 @@
+import Navbar from "@/components/Navbar/Navbar";
 import styles from "./hero.module.scss";
 
 // components

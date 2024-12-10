@@ -15,8 +15,8 @@ const Homepage = () => {
     <div className={styles.container}>
       <Hero />
       <Section />
-      <NewCollection />
       <Sale />
+      <NewCollection />
       <Arrivals />
       <Budget />
       <Category />
