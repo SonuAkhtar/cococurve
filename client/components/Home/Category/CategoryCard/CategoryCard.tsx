@@ -1,17 +1,15 @@
 import styles from "./categoryCard.module.scss";
 
+// type
+import { CategoryType } from "@/types";
+
 // components
 import Button from "@/components/Button/Button";
 
-interface catProps {
-  image: string;
-  title: string;
-  priceInfo: string;
-}
-
-const CategoryCard = ({ image, title, priceInfo }: catProps) => {
+const CategoryCard = ({ id, image, title, priceInfo }: CategoryType) => {
   return (
     <div
+      key={id}
       className={styles.container}
       style={{ backgroundImage: `url(${image})` }}
     >

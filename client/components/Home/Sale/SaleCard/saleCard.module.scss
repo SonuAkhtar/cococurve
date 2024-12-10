@@ -1,0 +1,90 @@
+@import "../../../../app/variables";
+
+.container {
+  width: 250px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.25rem;
+
+  .image {
+    height: 180px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 0.25rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 0.5rem;
+
+    .rating {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 20px;
+      padding: 0.25rem 0.5rem;
+      border-radius: 1rem;
+      background-color: $YELLOW_300;
+    }
+
+    svg {
+      color: $MAIN_WHITE;
+    }
+  }
+
+  .info {
+    h4 {
+      text-align: left;
+      padding: 1rem 0;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 20px;
+    }
+
+    .priceOffer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .price {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.25rem;
+
+        .currency {
+          font-size: 12px;
+          font-weight: 500;
+          line-height: 14px;
+          color: $GRAY_COOL_200;
+        }
+
+        .newPrice {
+          font-size: 32px;
+          font-weight: 700;
+          line-height: 40px;
+        }
+
+        .oldPrice {
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 24px;
+          color: $GRAY_COOL_300;
+          text-decoration: line-through;
+        }
+      }
+
+      .offer {
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 20px;
+        padding: 0.25rem 0.75rem;
+        border-radius: 1rem;
+        background-color: $SUCCESS_500;
+        color: $SUCCESS_900;
+        border: 1px solid $SUCCESS_200;
+      }
+    }
+  }
+}

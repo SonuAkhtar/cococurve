@@ -10,7 +10,7 @@ const Category = () => {
       <div className={styles.wrapper}>
         {categoryData.map((item) => (
           <CategoryCard
-            key={item.id}
+            id={item.id}
             image={item.image}
             title={item.title}
             priceInfo={item.priceInfo}
