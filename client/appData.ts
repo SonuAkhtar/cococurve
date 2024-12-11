@@ -1,6 +1,7 @@
 // types
 import {
   arrivalsType,
+  BudgetType,
   CategoryType,
   newCollectionType,
   SaleType,
@@ -127,5 +128,62 @@ export const arrivalsData: arrivalsType[] = [
         image: "/Images/home/arrivals/arrivals_5.jpg",
       },
     ],
+  },
+];
+
+export const budgetData: BudgetType[] = [
+  {
+    id: 1,
+    image: "/Images/home/budget/budget_1.jpg",
+    rating: "4.8",
+    title: "Men Oversized Tshirt",
+    newPrice: "500",
+    oldPrice: "899",
+    off: "37",
+  },
+  {
+    id: 2,
+    image: "/Images/home/budget/budget_2.jpg",
+    rating: "4.8",
+    title: "Men Oversized Tshirt",
+    newPrice: "500",
+    oldPrice: "899",
+    off: "37",
+  },
+  {
+    id: 3,
+    image: "/Images/home/budget/budget_3.jpg",
+    rating: "4.8",
+    title: "Men Oversized Tshirt",
+    newPrice: "500",
+    oldPrice: "899",
+    off: "37",
+  },
+  {
+    id: 4,
+    image: "/Images/home/budget/budget_4.jpg",
+    rating: "4.8",
+    title: "Men Oversized Tshirt",
+    newPrice: "500",
+    oldPrice: "899",
+    off: "37",
+  },
+  {
+    id: 5,
+    image: "/Images/home/budget/budget_5.jpg",
+    rating: "4.8",
+    title: "Men Oversized Tshirt",
+    newPrice: "500",
+    oldPrice: "899",
+    off: "37",
+  },
+  {
+    id: 6,
+    image: "/Images/home/budget/budget_6.jpg",
+    rating: "4.8",
+    title: "Men Oversized Tshirt",
+    newPrice: "500",
+    oldPrice: "899",
+    off: "37",
   },
 ];

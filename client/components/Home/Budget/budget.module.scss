@@ -1,4 +1,45 @@
 .container {
   width: 100%;
-  height: 60vh;
+  height: 100%;
+  min-height: 75vh;
+  padding: 5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 2.5rem;
+
+    .header {
+      .title {
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 20px;
+        letter-spacing: 0.08em;
+      }
+
+      .offer {
+        font-size: 72px;
+        font-weight: 800;
+        line-height: 80px;
+        background: -webkit-linear-gradient(90deg, #3881f0 0%, #15376a 100%);
+
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+  }
 }

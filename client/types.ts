@@ -34,6 +34,16 @@ export interface arrivalsItem {
 }
 
 export interface arrivalsType {
-  left?: arrivalsItem[]; // 'left' is optional
-  right?: arrivalsItem[]; // 'right' is optional
+  left?: arrivalsItem[];
+  right?: arrivalsItem[];
+}
+
+export interface BudgetType {
+  id: number;
+  image: string;
+  rating: string;
+  title: string;
+  newPrice: string;
+  oldPrice: string;
+  off: string;
 }
