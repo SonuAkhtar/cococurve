@@ -14,3 +14,13 @@ export interface SaleType {
   oldPrice: string;
   off: string;
 }
+
+export interface arrivalsItem {
+  id: number;
+  image: string;
+}
+
+export interface arrivalsType {
+  left?: arrivalsItem[]; // 'left' is optional
+  right?: arrivalsItem[]; // 'right' is optional
+}
