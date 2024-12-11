@@ -17,7 +17,7 @@ const Sale = () => {
           <div className={styles.subtitle}>On all women apparels</div>
         </div>
         <div className={styles.cards}>
-          {saleData.map((item, index) => (
+          {saleData.map((item) => (
             <SaleCard
               key={item.id}
               id={item.id}
