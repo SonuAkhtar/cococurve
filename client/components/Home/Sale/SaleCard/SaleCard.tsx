@@ -8,7 +8,6 @@ import { faHeart, faStar } from "@fortawesome/free-solid-svg-icons";
 import { SaleType } from "@/types";
 
 const SaleCard = ({
-  id,
   image,
   rating,
   title,
@@ -17,7 +16,7 @@ const SaleCard = ({
   off,
 }: SaleType) => {
   return (
-    <div key={id} className={styles.container}>
+    <div className={styles.container}>
       <div
         className={styles.image}
         style={{ backgroundImage: `url(${image})` }}

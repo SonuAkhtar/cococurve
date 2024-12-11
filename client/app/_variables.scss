@@ -35,3 +35,11 @@ $YELLOW_900: #713b12;
 $SUCCESS_200: #a6f4c5;
 $SUCCESS_500: #ecfdf3;
 $SUCCESS_900: #054f31;
+
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+);

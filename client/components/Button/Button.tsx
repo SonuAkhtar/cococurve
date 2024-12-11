@@ -1,7 +1,10 @@
 import styles from "./button.module.scss";
 
-const Button = (props: any) => {
-  return <button className={styles.container}>{props.text}</button>;
+// type
+import { buttonType } from "@/types";
+
+const Button = ({ text }: buttonType) => {
+  return <button className={styles.container}>{text}</button>;
 };
 
 export default Button;

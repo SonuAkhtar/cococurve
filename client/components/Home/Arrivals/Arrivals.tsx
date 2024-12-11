@@ -12,12 +12,12 @@ const Arrivals = () => {
         <div className={styles.cards}>
           <div className={styles.cards_left}>
             {arrivalsData[0].left?.map((item) => (
-              <ArrivalsCard id={item.id} image={item.image} />
+              <ArrivalsCard key={item.id} id={item.id} image={item.image} />
             ))}
           </div>
           <div className={styles.cards_right}>
             {arrivalsData[1].right?.map((item) => (
-              <ArrivalsCard id={item.id} image={item.image} />
+              <ArrivalsCard key={item.id} id={item.id} image={item.image} />
             ))}
           </div>
         </div>

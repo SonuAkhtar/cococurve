@@ -1,9 +1,12 @@
 import styles from "./banner.module.scss";
 
-const Banner = (props: any) => {
+// type
+import { bannerType } from "@/types";
+
+const Banner = ({ text }: bannerType) => {
   return (
     <div className={styles.container}>
-      <div className={styles.wrapper}>{props.text}</div>
+      <div className={styles.wrapper}>{text}</div>
     </div>
   );
 };

@@ -1,3 +1,11 @@
+export interface bannerType {
+  text: string;
+}
+
+export interface buttonType {
+  text: string;
+}
+
 export interface CategoryType {
   id: number;
   image: string;

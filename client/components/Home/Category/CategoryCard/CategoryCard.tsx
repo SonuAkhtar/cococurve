@@ -6,10 +6,9 @@ import { CategoryType } from "@/types";
 // components
 import Button from "@/components/Button/Button";
 
-const CategoryCard = ({ id, image, title, priceInfo }: CategoryType) => {
+const CategoryCard = ({ image, title, priceInfo }: CategoryType) => {
   return (
     <div
-      key={id}
       className={styles.container}
       style={{ backgroundImage: `url(${image})` }}
     >
