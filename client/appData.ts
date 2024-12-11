@@ -1,5 +1,10 @@
 // types
-import { arrivalsType, CategoryType, SaleType } from "./types";
+import {
+  arrivalsType,
+  CategoryType,
+  newCollectionType,
+  SaleType,
+} from "./types";
 
 export const categoryData: CategoryType[] = [
   {
@@ -86,6 +91,11 @@ export const saleData: SaleType[] = [
     oldPrice: "899",
     off: "37",
   },
+];
+
+export const newCollectionData: newCollectionType[] = [
+  { id: 1, image: "/Images/home/newCollection/one.png" },
+  { id: 1, image: "/Images/home/newCollection/two.png" },
 ];
 
 export const arrivalsData: arrivalsType[] = [

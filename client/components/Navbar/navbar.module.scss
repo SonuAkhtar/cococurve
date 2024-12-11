@@ -31,6 +31,10 @@
       justify-content: space-between;
       gap: 2.5rem;
 
+      @media screen and (max-width: $mobile) {
+        display: none;
+      }
+
       li {
         display: flex;
         align-items: center;
@@ -51,6 +55,10 @@
       font-weight: 500;
       line-height: 30px;
       letter-spacing: 0.1em;
+
+      @media screen and (max-width: $mobile) {
+        width: 100%;
+      }
     }
 
     .search {
@@ -58,6 +66,10 @@
       align-items: center;
       justify-content: center;
       gap: 1.5rem;
+
+      @media screen and (max-width: $mobile) {
+        display: none;
+      }
 
       .search_area {
         height: 3rem;
@@ -103,6 +115,14 @@
           cursor: pointer;
           border: 1px solid $GRAY_COOL;
         }
+      }
+    }
+
+    .menuIcon {
+      display: block;
+
+      @media screen and (min-width: $mobile) {
+        display: none;
       }
     }
   }

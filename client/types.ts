@@ -23,6 +23,11 @@ export interface SaleType {
   off: string;
 }
 
+export interface newCollectionType {
+  id: number;
+  image: string;
+}
+
 export interface arrivalsItem {
   id: number;
   image: string;

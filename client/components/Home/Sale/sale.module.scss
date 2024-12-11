@@ -27,6 +27,9 @@
         font-size: 72px;
         font-weight: 800;
         line-height: 80px;
+        background: -webkit-linear-gradient(90deg, #f04438 0%, #9e2929 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
       }
 
       .subtitle {

@@ -2,6 +2,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faAngleDown,
+  faBars,
   faMagnifyingGlass,
   faMinus,
 } from "@fortawesome/free-solid-svg-icons";
@@ -47,6 +48,7 @@ const Navbar = () => {
             <button>Login In</button>
           </div>
         </div>
+        <FontAwesomeIcon icon={faBars} className={styles.menuIcon} />
       </main>
     </div>
   );

@@ -1,0 +1,59 @@
+@use "../../../../app/variables" as *;
+
+.container {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 120vh;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (max-width: $mobile) {
+    height: 55vh;
+    width: 100%;
+  }
+
+  .infoBox {
+    width: 80%;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem;
+    background-color: $ALPHA_BLACK_02;
+    color: $MAIN_WHITE;
+    backdrop-filter: blur(52px);
+    border: 1px solid $ALPHA_WHITE_05;
+
+    @media screen and (max-width: $mobile) {
+      width: 90%;
+    }
+
+    h1 {
+      font-size: 88px;
+      font-weight: 700;
+      line-height: 96px;
+
+      @media screen and (max-width: $mobile) {
+        font-size: 48px;
+        line-height: 56px;
+      }
+    }
+
+    .price {
+      font-size: 40px;
+      font-weight: 500;
+      line-height: 48px;
+
+      @media screen and (max-width: $mobile) {
+        font-size: 24px;
+        line-height: 32px;
+      }
+    }
+  }
+}

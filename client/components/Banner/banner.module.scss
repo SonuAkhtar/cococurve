@@ -11,5 +11,11 @@
     font-weight: 700;
     text-align: center;
     letter-spacing: 0.08em;
+    padding: 0 0.5rem;
+
+    @media screen and (max-width: $mobile) {
+      font-size: 12px;
+      line-height: 16px;
+    }
   }
 }
