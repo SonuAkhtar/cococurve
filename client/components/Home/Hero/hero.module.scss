@@ -17,6 +17,7 @@
   @media screen and (max-width: $mobile) {
     height: 80vh;
     background-position: 50% 90%;
+    background-size: contain;
   }
 
   .wrapper {
@@ -34,9 +35,6 @@
       font-weight: 700;
       line-height: 20px;
       letter-spacing: 0.08em;
-
-      @media screen and (max-width: $mobile) {
-      }
     }
 
     .title {
