@@ -27,68 +27,77 @@
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
-  }
 
-  button {
-    width: 100%;
-  }
+    main {
+      height: 4rem;
+      width: 100%;
 
-  .category {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
+      input {
+        width: 80%;
+      }
+    }
 
-    .category_item {
-      position: relative;
+    button {
+      width: 100%;
+    }
+
+    .category {
       width: 100%;
       display: flex;
       flex-direction: column;
-      font-size: 22px;
-      font-weight: 600;
-      line-height: 28px;
-      text-transform: uppercase;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
 
-      svg {
-        transition: all 0.5s ease-in-out;
-      }
-
-      &.active {
-        .category_icon {
-          transform: rotate(180deg);
-        }
-      }
-
-      .category_name_icon {
+      .category_item {
+        position: relative;
         width: 100%;
         display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 1rem;
-        background-color: $ALPHA_WHITE_01;
-        border: 1px solid $ALPHA_WHITE_02;
-      }
+        flex-direction: column;
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 28px;
+        text-transform: uppercase;
 
-      .category_item_box {
-        width: 100%;
-        height: 0;
-        transition: all 0.5s ease;
-        overflow: hidden;
-
-        &.active {
-          height: 450px;
+        svg {
+          transition: all 0.5s ease-in-out;
         }
 
-        .category_item_box_item {
+        &.active {
+          .category_icon {
+            transform: rotate(180deg);
+          }
+        }
+
+        .category_name_icon {
+          width: 100%;
           display: flex;
+          align-items: center;
           justify-content: space-between;
-          font-size: 16px;
-          font-weight: 700;
-          line-height: 20px;
           padding: 1rem;
+          background-color: $ALPHA_WHITE_01;
           border: 1px solid $ALPHA_WHITE_02;
+        }
+
+        .category_item_box {
+          width: 100%;
+          height: 0;
+          transition: all 0.5s ease;
+          overflow: hidden;
+
+          &.active {
+            height: 450px;
+          }
+
+          .category_item_box_item {
+            display: flex;
+            justify-content: space-between;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 20px;
+            padding: 1rem;
+            border: 1px solid $ALPHA_WHITE_02;
+          }
         }
       }
     }

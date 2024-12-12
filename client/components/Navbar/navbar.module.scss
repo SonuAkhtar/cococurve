@@ -14,8 +14,11 @@
   background-repeat: no-repeat;
   background-size: cover;
 
-  .main {
-    position: relative;
+  @media screen and (max-width: $mobile) {
+    height: 10vh;
+  }
+
+  nav {
     width: 100%;
     height: fit-content;
     min-height: 76px;
@@ -31,7 +34,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 2.5rem;
+      gap: 2rem;
 
       @media screen and (max-width: $mobile) {
         display: none;
@@ -42,21 +45,16 @@
         align-items: center;
         justify-content: center;
         gap: 0.5rem;
+        text-transform: uppercase;
         cursor: pointer;
 
         svg {
           transition: all 0.5s ease-in-out;
-          &.show {
+          &.active {
             transform: rotate(180deg);
           }
         }
       }
-    }
-
-    .category {
-      display: flex;
-      align-items: center;
-      justify-content: center;
     }
 
     .logo {
@@ -80,61 +78,14 @@
         display: none;
       }
 
-      .search_area {
-        height: 3rem;
-        padding: 0 1rem;
-        border: 1px solid $ALPHA_WHITE_01;
-        background-color: transparent;
-
-        input {
-          outline: none;
-          border: none;
-          height: 100%;
-          padding: 0.75rem 0;
-          background-color: transparent;
-          color: $MAIN_WHITE;
-
-          &::placeholder {
-            color: $ALPHA_WHITE_05;
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 20px;
-          }
-        }
-
-        .divider {
-          transform: rotate(90deg);
-          color: $ALPHA_WHITE_03;
-        }
-
-        .icon {
-          cursor: pointer;
-          width: 18px;
-          height: 18px;
-        }
-      }
-
-      .login_btn {
-        button {
-          max-width: 400px;
-          padding: 12px 24px;
-          font-size: 18px;
-          font-weight: 600;
-          line-height: 24px;
-          cursor: pointer;
-          border: 1px solid $GRAY_COOL;
-        }
-      }
-    }
-
-    .menuIcon {
-      display: block;
-      padding: 0.5rem;
-      background-color: $ALPHA_WHITE_01;
-      border-radius: 0.25rem;
-
-      @media screen and (min-width: $mobile) {
-        display: none;
+      button {
+        max-width: 400px;
+        padding: 12px 24px;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 24px;
+        cursor: pointer;
+        border: 1px solid $GRAY_COOL;
       }
     }
   }

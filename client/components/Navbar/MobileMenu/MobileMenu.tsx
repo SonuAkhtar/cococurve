@@ -1,35 +1,31 @@
 import { useState } from "react"; // react
-import styles from "./mobileMenu.module.scss"; // styles
+import styles from "./mobileMenu.module.scss"; // SCSS
 import { menuCategoryList } from "@/appData"; // appData
-import { MenuCategoryType } from "@/types"; // type
+import { MenuCategoryType, mobileMenuPropsType } from "@/types"; // type
 
 // fontawesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 
-// component
+// components
+import NavSearch from "@/components/NavSearch/NavSearch";
 import Button from "@/components/Button/Button";
 
-// props interface
-interface showBurgerType {
-  showBurger: boolean;
-}
-
-const MobileMenu = ({ showBurger }: showBurgerType) => {
+const MobileMenu = ({ showMobileMenu }: mobileMenuPropsType) => {
   const [clickedType, setClickedType] = useState("");
-
   const handleMenuClick = (type: string) => {
     setClickedType((prev) => (prev === type ? "" : type));
   };
 
   return (
-    <div className={`${styles.container} ${showBurger ? styles.show : ""}`}>
+    <div className={`${styles.container} ${showMobileMenu ? styles.show : ""}`}>
       <div className={styles.wrapper}>
-        <div className={styles.search}></div>
+        <NavSearch />
+
         <Button text="Log In" />
 
         <div className={styles.category}>
-          {Object.keys(menuCategoryList).map((item: string, idx) => (
+          {Object.keys(menuCategoryList).map((item, idx) => (
             <div
               key={idx}
               className={`${styles.category_item} ${

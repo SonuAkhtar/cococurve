@@ -1,30 +1,32 @@
-import { useEffect, useState } from "react"; //react
-import styles from "./desktopMenu.module.scss"; //styles
-import { womenMenuData, menMenuData } from "@/appData"; //appData
+import { useEffect, useState } from "react"; // react
+import styles from "./desktopMenu.module.scss"; // SCSS
+import { womenMenuData, menMenuData } from "@/appData"; // appData
+import { desktopMenuPropsType } from "@/types"; // type
 
 // fontawesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 
-// props interface
-interface showMenuProp {
-  showMenu: boolean;
-  selectedMenu: string;
-}
-
-const DesktopMenu = ({ showMenu, selectedMenu }: showMenuProp) => {
+const DesktopMenu = ({
+  showDesktopMenu,
+  selectedNavItem,
+}: desktopMenuPropsType) => {
   const [currentMenuData, setCurrentMenuData] = useState(womenMenuData);
 
   useEffect(() => {
-    if (selectedMenu === "women") {
+    if (selectedNavItem === "women") {
       setCurrentMenuData(womenMenuData);
-    } else if (selectedMenu === "men") {
+    } else if (selectedNavItem === "men") {
       setCurrentMenuData(menMenuData);
     } else setCurrentMenuData(womenMenuData);
-  }, [selectedMenu]);
+  }, [selectedNavItem]);
 
   return (
-    <div className={`${styles.container} ${showMenu ? styles.showMenu : ""}`}>
+    <div
+      className={`${styles.container} ${
+        showDesktopMenu ? styles.showMenu : ""
+      }`}
+    >
       <div className={styles.wrapper}>
         <div className={styles.one}>
           <div className={styles.top}>

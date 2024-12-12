@@ -1,87 +1,68 @@
 "use client";
 
-import { useState } from "react"; //react
-import styles from "./navbar.module.scss"; // style
+import { useState } from "react"; // react
+import styles from "./navbar.module.scss"; // SCSS
+import { menuCategoryList } from "@/appData"; // appData
 
 // fontawesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faAngleDown,
-  faBars,
-  faMagnifyingGlass,
-  faMinus,
-  faXmark,
-} from "@fortawesome/free-solid-svg-icons";
+import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 
 // components
 import Banner from "../Banner/Banner";
+import NavSearch from "../NavSearch/NavSearch";
+import Button from "../Button/Button";
 import DesktopMenu from "./DesktopMenu/DesktopMenu";
 import MobileMenu from "./MobileMenu/MobileMenu";
+import BurgerButton from "../BurgerButton/BurgerButton";
 
 const bannerText: string =
   "USE FIRST15 TO GET 15% DISCOUNT ON YOUR FIRST ORDER";
 
 const Navbar = () => {
-  const [showMenu, setShowMenu] = useState(false);
-  const [showBurger, setShowBurger] = useState(false);
-  const [selectedMenu, setSelectedMenu] = useState("");
+  const [showDesktopMenu, setShowDesktopMenu] = useState(false);
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const [selectedNavItem, setSelectedNavItem] = useState("");
 
   const handleMenuClick = (value: string) => {
-    setShowMenu(!showMenu);
-    setSelectedMenu((prev) => (prev === value ? "" : value));
+    setShowDesktopMenu(!showDesktopMenu);
+    setSelectedNavItem((prev) => (prev === value ? "" : value));
   };
 
   return (
     <div className={styles.container}>
       <Banner text={bannerText} />
 
-      <main className={styles.main}>
-        <nav className={styles.category}>
-          <ul>
-            <li onClick={() => handleMenuClick("women")}>
-              WOMEN
+      <nav>
+        <ul className={styles.category}>
+          {Object.keys(menuCategoryList).map((value) => (
+            <li onClick={() => handleMenuClick(value)}>
+              {value}
               <FontAwesomeIcon
-                className={selectedMenu === "women" ? styles.show : ""}
+                className={selectedNavItem === value ? styles.active : ""}
                 icon={faAngleDown}
               />
             </li>
-            <li onClick={() => handleMenuClick("men")}>
-              MEN
-              <FontAwesomeIcon
-                className={selectedMenu === "men" ? styles.show : ""}
-                icon={faAngleDown}
-              />
-            </li>
-            <li onClick={() => handleMenuClick("trends")}>
-              TRENDS
-              <FontAwesomeIcon
-                className={selectedMenu === "trends" ? styles.show : ""}
-                icon={faAngleDown}
-              />
-            </li>
-          </ul>
-        </nav>
+          ))}
+        </ul>
         <div className={styles.logo}>COCOCURVE</div>
+
         <div className={styles.search}>
-          <div className={styles.search_area}>
-            <input type="text" placeholder="Search Fashion Here" />
-
-            <FontAwesomeIcon icon={faMinus} className={styles.divider} />
-
-            <FontAwesomeIcon icon={faMagnifyingGlass} className={styles.icon} />
-          </div>
-          <div className={styles.login_btn}>
-            <button>Login In</button>
-          </div>
+          <NavSearch />
+          <Button text="Log In" />
         </div>
-        <FontAwesomeIcon
-          icon={showBurger ? faBars : faXmark}
-          className={styles.menuIcon}
-          onClick={() => setShowBurger(!showBurger)}
+
+        <BurgerButton
+          showMobileMenu={showMobileMenu}
+          setShowMobileMenu={setShowMobileMenu}
         />
-        <DesktopMenu showMenu={showMenu} selectedMenu={selectedMenu} />
-      </main>
-      <MobileMenu showBurger={showBurger} />
+      </nav>
+
+      <DesktopMenu
+        showDesktopMenu={showDesktopMenu}
+        selectedNavItem={selectedNavItem}
+      />
+      <MobileMenu showMobileMenu={showMobileMenu} />
     </div>
   );
 };

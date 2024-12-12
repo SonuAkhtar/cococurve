@@ -1,11 +1,3 @@
-export interface bannerType {
-  text: string;
-}
-
-export interface buttonType {
-  text: string;
-}
-
 export interface CategoryType {
   id: number;
   image: string;
@@ -76,4 +68,27 @@ export interface MenuCategoryType {
   women: menuCategoryItem[];
   men: menuCategoryItem[];
   trends: menuCategoryItem[];
+}
+
+// ----- Below are the Props type for components/pages -----
+export interface bannerPropsType {
+  text: string;
+}
+
+export interface buttonPropsType {
+  text: string;
+}
+
+export interface burgerButtonPropsType {
+  showMobileMenu: boolean;
+  setShowMobileMenu: (showBurger: boolean) => void;
+}
+
+export interface desktopMenuPropsType {
+  showDesktopMenu: boolean;
+  selectedNavItem: string;
+}
+
+export interface mobileMenuPropsType {
+  showMobileMenu: boolean;
 }

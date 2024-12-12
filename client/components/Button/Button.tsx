@@ -1,9 +1,7 @@
-import styles from "./button.module.scss";
+import styles from "./button.module.scss"; // SCSS
+import { buttonPropsType } from "@/types"; // type
 
-// type
-import { buttonType } from "@/types";
-
-const Button = ({ text }: buttonType) => {
+const Button = ({ text }: buttonPropsType) => {
   return <button className={styles.container}>{text}</button>;
 };
 
