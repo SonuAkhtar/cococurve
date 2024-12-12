@@ -1,0 +1,96 @@
+@use "../../../app/variables" as *;
+
+.container {
+  width: 100%;
+  height: max-content;
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem;
+  transform: translateY(-150vh);
+  background-color: $MAIN_BLACK;
+  color: $MAIN_WHITE;
+  transition: all 0.5s ease-in-out;
+
+  &.show {
+    transform: translateY(0);
+  }
+
+  @media screen and (min-width: $mobile) {
+    display: none;
+  }
+
+  .wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .category {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    .category_item {
+      position: relative;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      font-size: 22px;
+      font-weight: 600;
+      line-height: 28px;
+      text-transform: uppercase;
+
+      svg {
+        transition: all 0.5s ease-in-out;
+      }
+
+      &.active {
+        .category_icon {
+          transform: rotate(180deg);
+        }
+      }
+
+      .category_name_icon {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+        background-color: $ALPHA_WHITE_01;
+        border: 1px solid $ALPHA_WHITE_02;
+      }
+
+      .category_item_box {
+        width: 100%;
+        height: 0;
+        transition: all 0.5s ease;
+        overflow: hidden;
+
+        &.active {
+          height: 450px;
+        }
+
+        .category_item_box_item {
+          display: flex;
+          justify-content: space-between;
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 20px;
+          padding: 1rem;
+          border: 1px solid $ALPHA_WHITE_02;
+        }
+      }
+    }
+  }
+}

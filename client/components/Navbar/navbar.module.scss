@@ -129,6 +129,9 @@
 
     .menuIcon {
       display: block;
+      padding: 0.5rem;
+      background-color: $ALPHA_WHITE_01;
+      border-radius: 0.25rem;
 
       @media screen and (min-width: $mobile) {
         display: none;

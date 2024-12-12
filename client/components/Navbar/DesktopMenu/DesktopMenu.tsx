@@ -1,21 +1,18 @@
-import { useEffect, useState } from "react";
-
-// style
-import styles from "./menu.module.scss";
+import { useEffect, useState } from "react"; //react
+import styles from "./desktopMenu.module.scss"; //styles
+import { womenMenuData, menMenuData } from "@/appData"; //appData
 
 // fontawesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 
-// appData
-import { womenMenuData, menMenuData } from "@/appData";
-
+// props interface
 interface showMenuProp {
   showMenu: boolean;
   selectedMenu: string;
 }
 
-const Menu = ({ showMenu, selectedMenu }: showMenuProp) => {
+const DesktopMenu = ({ showMenu, selectedMenu }: showMenuProp) => {
   const [currentMenuData, setCurrentMenuData] = useState(womenMenuData);
 
   useEffect(() => {
@@ -110,4 +107,4 @@ const Menu = ({ showMenu, selectedMenu }: showMenuProp) => {
   );
 };
 
-export default Menu;
+export default DesktopMenu;

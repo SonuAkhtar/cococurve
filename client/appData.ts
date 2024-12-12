@@ -3,6 +3,7 @@ import {
   arrivalsType,
   BudgetType,
   CategoryType,
+  MenuCategoryType,
   MenuListType,
   newCollectionType,
   SaleType,
@@ -103,7 +104,7 @@ export const newCollectionData: newCollectionType[] = [
     image: "/Images/home/newCollection/one.png",
   },
   {
-    id: 1,
+    id: 2,
     title: `SUMMER'24 WORDROBE`,
     price: 899,
     image: "/Images/home/newCollection/two.png",
@@ -127,11 +128,11 @@ export const arrivalsData: arrivalsType = {
   ],
   right: [
     {
-      id: 1,
+      id: 4,
       image: "/Images/home/arrivals/arrivals_4.jpg",
     },
     {
-      id: 2,
+      id: 5,
       image: "/Images/home/arrivals/arrivals_5.jpg",
     },
   ],
@@ -193,6 +194,39 @@ export const budgetData: BudgetType[] = [
     off: "37",
   },
 ];
+
+export const menuCategoryList: MenuCategoryType = {
+  women: [
+    { id: 1, name: "Tops" },
+    { id: 2, name: "Bottoms" },
+    { id: 3, name: "Jump/Body suits" },
+    { id: 4, name: "Dresses" },
+    { id: 5, name: "Jewelry" },
+    { id: 6, name: "Winters" },
+    { id: 7, name: "Jackets" },
+    { id: 8, name: "Lingerie" },
+  ],
+  men: [
+    { id: 9, name: "Tops" },
+    { id: 10, name: "Bottoms" },
+    { id: 11, name: "Jump/Body suits" },
+    { id: 12, name: "Dresses" },
+    { id: 13, name: "Jewelry" },
+    { id: 14, name: "Winters" },
+    { id: 15, name: "Jackets" },
+    { id: 16, name: "Lingerie" },
+  ],
+  trends: [
+    { id: 17, name: "Tops" },
+    { id: 18, name: "Bottoms" },
+    { id: 19, name: "Jump/Body suits" },
+    { id: 20, name: "Dresses" },
+    { id: 21, name: "Jewelry" },
+    { id: 22, name: "Winters" },
+    { id: 23, name: "Jackets" },
+    { id: 24, name: "Lingerie" },
+  ],
+};
 
 export const womenMenuData: MenuListType = {
   centerImage: "/Images/menu/menu-women.png",

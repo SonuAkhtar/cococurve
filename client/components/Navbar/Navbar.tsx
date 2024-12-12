@@ -1,8 +1,7 @@
 "use client";
 
-import { useState } from "react";
-// style
-import styles from "./navbar.module.scss";
+import { useState } from "react"; //react
+import styles from "./navbar.module.scss"; // style
 
 // fontawesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -11,22 +10,24 @@ import {
   faBars,
   faMagnifyingGlass,
   faMinus,
+  faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 
 // components
 import Banner from "../Banner/Banner";
-import Menu from "./Menu/Menu";
+import DesktopMenu from "./DesktopMenu/DesktopMenu";
+import MobileMenu from "./MobileMenu/MobileMenu";
 
 const bannerText: string =
   "USE FIRST15 TO GET 15% DISCOUNT ON YOUR FIRST ORDER";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const [showBurger, setShowBurger] = useState(false);
   const [selectedMenu, setSelectedMenu] = useState("");
 
   const handleMenuClick = (value: string) => {
     setShowMenu(!showMenu);
-
     setSelectedMenu((prev) => (prev === value ? "" : value));
   };
 
@@ -73,9 +74,14 @@ const Navbar = () => {
             <button>Login In</button>
           </div>
         </div>
-        <FontAwesomeIcon icon={faBars} className={styles.menuIcon} />
-        <Menu showMenu={showMenu} selectedMenu={selectedMenu} />
+        <FontAwesomeIcon
+          icon={showBurger ? faBars : faXmark}
+          className={styles.menuIcon}
+          onClick={() => setShowBurger(!showBurger)}
+        />
+        <DesktopMenu showMenu={showMenu} selectedMenu={selectedMenu} />
       </main>
+      <MobileMenu showBurger={showBurger} />
     </div>
   );
 };

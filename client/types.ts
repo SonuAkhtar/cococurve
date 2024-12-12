@@ -66,3 +66,14 @@ export interface MenuListType {
   jackets: menuItem[];
   lingerie: menuItem[];
 }
+
+export interface menuCategoryItem {
+  id: number;
+  name: string;
+}
+
+export interface MenuCategoryType {
+  women: menuCategoryItem[];
+  men: menuCategoryItem[];
+  trends: menuCategoryItem[];
+}
