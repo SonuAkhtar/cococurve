@@ -1,7 +1,6 @@
-import styles from "./categoryCard.module.scss";
-
-// type
-import { CategoryType } from "@/types";
+import styles from "./categoryCard.module.scss"; // SCSS
+import { CategoryType } from "@/types"; // type
+import { dm_serif_display } from "@/app/fonts"; // fonts
 
 // components
 import Button from "@/components/Button/Button";
@@ -15,7 +14,7 @@ const CategoryCard = ({ image, title, priceInfo }: CategoryType) => {
     >
       <div className={styles.wrapper}>
         <div className={styles.title}>
-          <h1>{title}</h1>
+          <h1 className={dm_serif_display.className}>{title}</h1>
           <span>{priceInfo}</span>
         </div>
         <Button text="Shop Now" />

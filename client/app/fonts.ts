@@ -11,7 +11,7 @@ export const roboto = Roboto({
   display: "swap",
 });
 
-export const dM_serif_display = DM_Serif_Display({
+export const dm_serif_display = DM_Serif_Display({
   weight: "400",
   subsets: ["latin"],
   style: "italic",
