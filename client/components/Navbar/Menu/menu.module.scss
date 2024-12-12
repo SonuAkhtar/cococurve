@@ -1,0 +1,67 @@
+@use "../../../app/variables" as *;
+
+.container {
+  position: absolute;
+  top: -100vh;
+  left: 0;
+  width: 100%;
+  height: max-content;
+  min-height: 480px;
+  opacity: 0;
+  transition: top 0.7s ease, opacity 0.3s ease-in-out;
+
+  &.showMenu {
+    top: 85px;
+    opacity: 1;
+  }
+
+  .wrapper {
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    background-color: $MAIN_WHITE;
+    color: $MAIN_BLACK;
+
+    div {
+      flex: 1;
+
+      &.one,
+      &.four {
+        background-color: $GRAY_COOL_50;
+      }
+
+      &.three {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+
+      div {
+        padding: 1.5rem;
+        border-bottom: 1px solid $GRAY_COOL_400;
+
+        h2 {
+          font-size: 12px;
+          font-weight: 700;
+          line-height: 16px;
+          letter-spacing: 0.08em;
+          color: $BLUE_600;
+          padding-bottom: 1rem;
+        }
+
+        h4 {
+          margin-top: 0.5rem;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 20px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

@@ -3,6 +3,7 @@ import {
   arrivalsType,
   BudgetType,
   CategoryType,
+  MenuListType,
   newCollectionType,
   SaleType,
 } from "./types";
@@ -95,41 +96,46 @@ export const saleData: SaleType[] = [
 ];
 
 export const newCollectionData: newCollectionType[] = [
-  { id: 1, image: "/Images/home/newCollection/one.png" },
-  { id: 1, image: "/Images/home/newCollection/two.png" },
-];
-
-export const arrivalsData: arrivalsType[] = [
   {
-    left: [
-      {
-        id: 1,
-        image: "/Images/home/arrivals/arrivals_1.jpg",
-      },
-      {
-        id: 2,
-        image: "/Images/home/arrivals/arrivals_2.jpg",
-      },
-      {
-        id: 3,
-        image: "/Images/home/arrivals/arrivals_3.jpg",
-      },
-    ],
+    id: 1,
+    title: `NEW ARRIVALS`,
+    price: 899,
+    image: "/Images/home/newCollection/one.png",
   },
-
   {
-    right: [
-      {
-        id: 1,
-        image: "/Images/home/arrivals/arrivals_4.jpg",
-      },
-      {
-        id: 2,
-        image: "/Images/home/arrivals/arrivals_5.jpg",
-      },
-    ],
+    id: 1,
+    title: `SUMMER'24 WORDROBE`,
+    price: 899,
+    image: "/Images/home/newCollection/two.png",
   },
 ];
+
+export const arrivalsData: arrivalsType = {
+  left: [
+    {
+      id: 1,
+      image: "/Images/home/arrivals/arrivals_1.jpg",
+    },
+    {
+      id: 2,
+      image: "/Images/home/arrivals/arrivals_2.jpg",
+    },
+    {
+      id: 3,
+      image: "/Images/home/arrivals/arrivals_3.jpg",
+    },
+  ],
+  right: [
+    {
+      id: 1,
+      image: "/Images/home/arrivals/arrivals_4.jpg",
+    },
+    {
+      id: 2,
+      image: "/Images/home/arrivals/arrivals_5.jpg",
+    },
+  ],
+};
 
 export const budgetData: BudgetType[] = [
   {
@@ -161,7 +167,7 @@ export const budgetData: BudgetType[] = [
   },
   {
     id: 4,
-    image: "/Images/home/budget/budget_4.jpg",
+    image: "/Images/home/budget/budget_4.png",
     rating: "4.8",
     title: "Men Oversized Tshirt",
     newPrice: "500",
@@ -187,3 +193,347 @@ export const budgetData: BudgetType[] = [
     off: "37",
   },
 ];
+
+export const womenMenuData: MenuListType = {
+  centerImage: "/Images/menu/menu-women.png",
+  tops: [
+    {
+      id: 1,
+      name: "Blouses",
+    },
+    {
+      id: 2,
+      name: "Tshirts",
+    },
+    {
+      id: 3,
+      name: "Shirts",
+    },
+    {
+      id: 4,
+      name: "Tank Tops",
+    },
+  ],
+  bottoms: [
+    {
+      id: 5,
+      name: "Shorts",
+    },
+    {
+      id: 6,
+      name: "Skirts",
+    },
+    {
+      id: 7,
+      name: "Jeans",
+    },
+    {
+      id: 8,
+      name: "Trousers",
+    },
+  ],
+  bodySuits: [
+    {
+      id: 9,
+      name: "Jump Suits",
+    },
+    {
+      id: 10,
+      name: "Body Suits",
+    },
+    {
+      id: 11,
+      name: "Play Suits",
+    },
+  ],
+  dresses: [
+    {
+      id: 12,
+      name: "Maxi",
+    },
+    {
+      id: 13,
+      name: "Midi",
+    },
+    {
+      id: 14,
+      name: "Mini",
+    },
+    {
+      id: 15,
+      name: "Bodycon",
+    },
+  ],
+  jewelry: [
+    {
+      id: 16,
+      name: "Earrings",
+    },
+    {
+      id: 17,
+      name: "Necklace",
+    },
+    {
+      id: 18,
+      name: "Ring",
+    },
+    {
+      id: 19,
+      name: "Bracelet",
+    },
+    {
+      id: 20,
+      name: "Charm",
+    },
+  ],
+  winters: [
+    {
+      id: 21,
+      name: "Sweaters",
+    },
+    {
+      id: 22,
+      name: "Cardigans",
+    },
+    {
+      id: 23,
+      name: "Sweatshirts",
+    },
+    {
+      id: 24,
+      name: "Coats",
+    },
+    {
+      id: 25,
+      name: "Winter coords",
+    },
+    {
+      id: 26,
+      name: "Winter dresses",
+    },
+  ],
+  jackets: [
+    {
+      id: 27,
+      name: "Winter Jackets",
+    },
+    {
+      id: 28,
+      name: "Shrugs",
+    },
+    {
+      id: 29,
+      name: "Blazers",
+    },
+    {
+      id: 30,
+      name: "Casual Jackets",
+    },
+    {
+      id: 31,
+      name: "Winter coords",
+    },
+    {
+      id: 32,
+      name: "Winter coords",
+    },
+  ],
+  lingerie: [
+    {
+      id: 33,
+      name: "Bra",
+    },
+    {
+      id: 34,
+      name: "Bralette",
+    },
+    {
+      id: 35,
+      name: "Panties",
+    },
+    {
+      id: 36,
+      name: "Baby-dolls",
+    },
+    {
+      id: 37,
+      name: "Slip dresses",
+    },
+    {
+      id: 38,
+      name: "Matching sets",
+    },
+  ],
+};
+
+export const menMenuData: MenuListType = {
+  centerImage: "/Images/menu/menu-men.png",
+  tops: [
+    {
+      id: 1,
+      name: "Blouses",
+    },
+    {
+      id: 2,
+      name: "Tshirts",
+    },
+    {
+      id: 3,
+      name: "Shirts",
+    },
+    {
+      id: 4,
+      name: "Tank Tops",
+    },
+  ],
+  bottoms: [
+    {
+      id: 5,
+      name: "Shorts",
+    },
+    {
+      id: 6,
+      name: "Skirts",
+    },
+    {
+      id: 7,
+      name: "Jeans",
+    },
+    {
+      id: 8,
+      name: "Trousers",
+    },
+  ],
+  bodySuits: [
+    {
+      id: 9,
+      name: "Jump Suits",
+    },
+    {
+      id: 10,
+      name: "Body Suits",
+    },
+    {
+      id: 11,
+      name: "Play Suits",
+    },
+  ],
+  dresses: [
+    {
+      id: 12,
+      name: "Maxi",
+    },
+    {
+      id: 13,
+      name: "Midi",
+    },
+    {
+      id: 14,
+      name: "Mini",
+    },
+    {
+      id: 15,
+      name: "Bodycon",
+    },
+  ],
+  jewelry: [
+    {
+      id: 16,
+      name: "Earrings",
+    },
+    {
+      id: 17,
+      name: "Necklace",
+    },
+    {
+      id: 18,
+      name: "Ring",
+    },
+    {
+      id: 19,
+      name: "Bracelet",
+    },
+    {
+      id: 20,
+      name: "Charm",
+    },
+  ],
+  winters: [
+    {
+      id: 21,
+      name: "Sweaters",
+    },
+    {
+      id: 22,
+      name: "Cardigans",
+    },
+    {
+      id: 23,
+      name: "Sweatshirts",
+    },
+    {
+      id: 24,
+      name: "Coats",
+    },
+    {
+      id: 25,
+      name: "Winter coords",
+    },
+    {
+      id: 26,
+      name: "Winter dresses",
+    },
+  ],
+  jackets: [
+    {
+      id: 27,
+      name: "Winter Jackets",
+    },
+    {
+      id: 28,
+      name: "Shrugs",
+    },
+    {
+      id: 29,
+      name: "Blazers",
+    },
+    {
+      id: 30,
+      name: "Casual Jackets",
+    },
+    {
+      id: 31,
+      name: "Winter coords",
+    },
+    {
+      id: 32,
+      name: "Winter coords",
+    },
+  ],
+  lingerie: [
+    {
+      id: 33,
+      name: "Bra",
+    },
+    {
+      id: 34,
+      name: "Bralette",
+    },
+    {
+      id: 35,
+      name: "Panties",
+    },
+    {
+      id: 36,
+      name: "Baby-dolls",
+    },
+    {
+      id: 37,
+      name: "Slip dresses",
+    },
+    {
+      id: 38,
+      name: "Matching sets",
+    },
+  ],
+};

@@ -1,4 +1,5 @@
 import styles from "./hero.module.scss";
+import { dM_serif_display } from "@/app/fonts";
 
 // components
 import Button from "@/components/Button/Button";
@@ -11,7 +12,9 @@ const Hero = () => {
           <span className={styles.saleTitle}>Independence day sale</span>
           <span className={styles.timer}>12:26:21</span>
         </div>
-        <div className={styles.title}>Steal the deal of the hour!</div>
+        <div className={`${styles.title} ${dM_serif_display.className}`}>
+          Steal the deal <br /> of the hour!
+        </div>
         <div className={styles.terms}>Terms and conditions apply*</div>
         <Button text="Shop Now" />
       </div>

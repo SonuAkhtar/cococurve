@@ -1,4 +1,4 @@
-import { Inter, Roboto } from "next/font/google";
+import { DM_Serif_Display, Inter, Roboto } from "next/font/google";
 
 export const inter = Inter({
   subsets: ["latin"],
@@ -8,5 +8,12 @@ export const inter = Inter({
 export const roboto = Roboto({
   weight: "400",
   subsets: ["latin"],
+  display: "swap",
+});
+
+export const dM_serif_display = DM_Serif_Display({
+  weight: "400",
+  subsets: ["latin"],
+  style: "italic",
   display: "swap",
 });

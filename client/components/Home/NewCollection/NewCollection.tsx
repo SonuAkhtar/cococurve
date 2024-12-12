@@ -11,7 +11,13 @@ const NewCollection = () => {
     <div className={styles.container}>
       <div className={styles.wrapper}>
         {newCollectionData.map((item) => (
-          <NewCollectionCard key={item.id} id={item.id} image={item.image} />
+          <NewCollectionCard
+            key={item.id}
+            id={item.id}
+            title={item.title}
+            price={item.price}
+            image={item.image}
+          />
         ))}
       </div>
     </div>

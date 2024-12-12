@@ -25,6 +25,8 @@ export interface SaleType {
 
 export interface newCollectionType {
   id: number;
+  title: string;
+  price: number;
   image: string;
 }
 
@@ -34,8 +36,8 @@ export interface arrivalsItem {
 }
 
 export interface arrivalsType {
-  left?: arrivalsItem[];
-  right?: arrivalsItem[];
+  left: arrivalsItem[];
+  right: arrivalsItem[];
 }
 
 export interface BudgetType {
@@ -46,4 +48,21 @@ export interface BudgetType {
   newPrice: string;
   oldPrice: string;
   off: string;
+}
+
+export interface menuItem {
+  id: number;
+  name: string;
+}
+
+export interface MenuListType {
+  centerImage: string;
+  tops: menuItem[];
+  bottoms: menuItem[];
+  bodySuits: menuItem[];
+  dresses: menuItem[];
+  jewelry: menuItem[];
+  winters: menuItem[];
+  jackets: menuItem[];
+  lingerie: menuItem[];
 }
