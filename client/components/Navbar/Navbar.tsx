@@ -35,8 +35,8 @@ const Navbar = () => {
 
       <nav>
         <ul className={styles.category}>
-          {Object.keys(menuCategoryList).map((value) => (
-            <li onClick={() => handleMenuClick(value)}>
+          {Object.keys(menuCategoryList).map((value, idx) => (
+            <li key={idx} onClick={() => handleMenuClick(value)}>
               {value}
               <FontAwesomeIcon
                 className={selectedNavItem === value ? styles.active : ""}
