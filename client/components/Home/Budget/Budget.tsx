@@ -1,10 +1,8 @@
-import Button from "@/components/Button/Button";
-import styles from "./budget.module.scss";
-
-// appData
-import { budgetData } from "@/appData";
+import styles from "./budget.module.scss"; //SCSS
+import { budgetData } from "@/appData"; // appData
 
 // component
+import Button from "@/components/Button/Button";
 import BudgetCard from "./BudgetCard/BudgetCard";
 
 const Budget = () => {

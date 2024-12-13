@@ -1,7 +1,5 @@
-import styles from "./newCollectionCard.module.scss";
-
-// type
-import { newCollectionType } from "@/types";
+import styles from "./newCollectionCard.module.scss"; // SCSS
+import { newCollectionType } from "@/types"; // type
 
 const NewCollectionCard = ({ title, price, image }: newCollectionType) => {
   return (

@@ -1,11 +1,9 @@
-import styles from "./saleCard.module.scss";
+import styles from "./saleCard.module.scss"; //SCSS
+import { SaleType } from "@/types"; // type
 
 // fontawesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart, faStar } from "@fortawesome/free-solid-svg-icons";
-
-// type
-import { SaleType } from "@/types";
 
 const SaleCard = ({
   image,

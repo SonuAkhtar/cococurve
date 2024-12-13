@@ -1,11 +1,9 @@
-import styles from "./budgetCard.module.scss";
+import styles from "./budgetCard.module.scss"; //SCSS
+import { BudgetType } from "@/types"; //type
 
 // fontawesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart, faStar } from "@fortawesome/free-solid-svg-icons";
-
-// type
-import { BudgetType } from "@/types";
 
 const BudgetCard = ({
   image,

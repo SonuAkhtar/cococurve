@@ -1,7 +1,5 @@
-import styles from "./arrivalsCard.module.scss";
-
-// type
-import { arrivalsItem } from "@/types";
+import styles from "./arrivalsCard.module.scss"; //SCSS
+import { arrivalsItem } from "@/types"; //type
 
 const ArrivalsCard = ({ image }: arrivalsItem) => {
   return (

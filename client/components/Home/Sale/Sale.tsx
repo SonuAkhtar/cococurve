@@ -1,10 +1,8 @@
-import Button from "@/components/Button/Button";
-import styles from "./sale.module.scss";
-
-// appData
-import { saleData } from "@/appData";
+import styles from "./sale.module.scss"; // SCSS
+import { saleData } from "@/appData"; // appData
 
 // component
+import Button from "@/components/Button/Button";
 import SaleCard from "./SaleCard/SaleCard";
 
 const Sale = () => {

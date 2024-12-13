@@ -1,5 +1,5 @@
-import styles from "./hero.module.scss";
-import { dm_serif_display } from "@/app/fonts";
+import styles from "./hero.module.scss"; //SCSS
+import { dm_serif_display } from "@/app/fonts"; // fonts
 
 // components
 import Button from "@/components/Button/Button";

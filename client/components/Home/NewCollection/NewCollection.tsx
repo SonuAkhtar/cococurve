@@ -1,7 +1,5 @@
-import styles from "./newCollection.module.scss";
-
-// appData
-import { newCollectionData } from "@/appData";
+import styles from "./newCollection.module.scss"; //SCSS
+import { newCollectionData } from "@/appData"; // appData
 
 // component
 import NewCollectionCard from "./NewCollectionCard/NewCollectionCard";

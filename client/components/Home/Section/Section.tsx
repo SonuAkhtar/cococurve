@@ -1,5 +1,7 @@
+import styles from "./section.module.scss"; //SCSS
+
+// components
 import Button from "@/components/Button/Button";
-import styles from "./section.module.scss";
 
 const Section = () => {
   return (

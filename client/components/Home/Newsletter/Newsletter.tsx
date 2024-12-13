@@ -1,4 +1,4 @@
-import styles from "./newsletter.module.scss";
+import styles from "./newsletter.module.scss"; //SCSS
 
 // fontawesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

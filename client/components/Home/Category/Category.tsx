@@ -1,7 +1,7 @@
-import styles from "./category.module.scss";
+import styles from "./category.module.scss"; //SCSS
+import { categoryData } from "@/appData"; // appData
 
-// appData
-import { categoryData } from "@/appData";
+// components
 import CategoryCard from "./CategoryCard/CategoryCard";
 
 const Category = () => {

@@ -1,6 +1,5 @@
-import styles from "./arrivals.module.scss";
-// appData
-import { arrivalsData } from "@/appData";
+import styles from "./arrivals.module.scss"; // SCSS
+import { arrivalsData } from "@/appData"; // appData
 
 // component
 import ArrivalsCard from "./ArrivalsCard/ArrivalsCard";
