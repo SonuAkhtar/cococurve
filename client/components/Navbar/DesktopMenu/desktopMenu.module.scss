@@ -9,6 +9,7 @@
   min-height: 480px;
   opacity: 0;
   transition: top 0.7s ease, opacity 0.3s ease-in-out;
+  z-index: 999;
 
   &.showMenu {
     top: 120px;
