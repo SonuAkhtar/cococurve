@@ -17,7 +17,8 @@ export interface SectionType {
 export interface CategoryType {
   id: number;
   href: string;
-  image: string;
+  desktopImage: string;
+  mobileImage: string;
   altText: string;
 }
 

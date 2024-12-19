@@ -9,15 +9,20 @@ const Category = () => {
     <div className={styles.container}>
       <div className={styles.wrapper}>
         {categoryData.map((item) => (
-          <Link href={item.href}>
-            <Image
-              src={item.image}
-              alt={item.altText}
-              width={0}
-              height={0}
-              sizes="100vw"
-            />
-          </Link>
+          <div>
+            <Link href={item.href}>
+              <picture>
+                <source media="(max-width: 576px)" srcSet={item.mobileImage} />
+                <Image
+                  src={item.desktopImage}
+                  alt={item.altText}
+                  width={0}
+                  height={0}
+                  sizes="100vw"
+                />
+              </picture>
+            </Link>
+          </div>
         ))}
       </div>
     </div>

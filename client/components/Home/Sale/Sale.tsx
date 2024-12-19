@@ -1,3 +1,9 @@
+"use client";
+
+// import Packages
+import { Slide } from "react-slideshow-image";
+import "react-slideshow-image/dist/styles.css";
+
 import styles from "./sale.module.scss"; // SCSS
 import { saleData } from "@/appData"; // appData
 
@@ -16,18 +22,20 @@ const Sale = () => {
         </div>
         <div className={styles.cards_wrapper}>
           <div className={styles.cards}>
-            {saleData.map((item) => (
-              <SaleCard
-                key={item.id}
-                id={item.id}
-                image={item.image}
-                rating={item.rating}
-                title={item.title}
-                newPrice={item.newPrice}
-                oldPrice={item.oldPrice}
-                off={item.off}
-              />
-            ))}
+            <Slide>
+              {saleData.map((item) => (
+                <SaleCard
+                  key={item.id}
+                  id={item.id}
+                  image={item.image}
+                  rating={item.rating}
+                  title={item.title}
+                  newPrice={item.newPrice}
+                  oldPrice={item.oldPrice}
+                  off={item.off}
+                />
+              ))}
+            </Slide>
           </div>
         </div>
         <Button text="View All" />
