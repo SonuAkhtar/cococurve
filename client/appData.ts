@@ -3,48 +3,75 @@ import {
   arrivalsType,
   BudgetType,
   CategoryType,
+  HeroType,
   MenuCategoryType,
   MenuListType,
   newCollectionType,
   SaleType,
+  SectionType,
 } from "./types";
+
+export const heroData: HeroType = {
+  id: 1,
+  desktopImage: "/Images/home/hero/hero_desktop.png",
+  mobileImage: "/Images/home/hero/hero_mobile.png",
+  href: "/listing",
+  altText: "hero image",
+};
+
+export const sectionData: SectionType[] = [
+  {
+    id: 1,
+    href: "/women",
+    desktopImage: "/Images/home/section/section_desktop_women.png",
+    mobileImage: "/Images/home/section/section_mobile_women.png",
+    altText: "Women section image",
+  },
+  {
+    id: 2,
+    href: "/men",
+    desktopImage: "/Images/home/section/section_desktop_men.png",
+    mobileImage: "/Images/home/section/section_mobile_men.png",
+    altText: "Men section image",
+  },
+];
 
 export const categoryData: CategoryType[] = [
   {
     id: 1,
-    image: "/Images/home/category/category_1.jpg",
-    title: "TOPS",
-    priceInfo: "Starts from INR 899",
+    href: "/category/tops",
+    image: "/Images/home/category/category_desktop_1.png",
+    altText: "tops image",
   },
   {
     id: 2,
-    image: "/Images/home/category/category_2.jpg",
-    title: "CO-ORDS",
-    priceInfo: "Starts from INR 899",
+    href: "/category/coords",
+    image: "/Images/home/category/category_desktop_2.png",
+    altText: "coords image",
   },
   {
     id: 3,
-    image: "/Images/home/category/category_3.jpg",
-    title: "JACKETS",
-    priceInfo: "Starts from INR 899",
+    href: "/category/jackets",
+    image: "/Images/home/category/category_desktop_3.png",
+    altText: "jackets image",
   },
   {
     id: 4,
-    image: "/Images/home/category/category_4.jpg",
-    title: "JUMPSUITS",
-    priceInfo: "Starts from INR 899",
+    href: "/category/jumpsuits",
+    image: "/Images/home/category/category_desktop_4.png",
+    altText: "jumpsuits image",
   },
   {
     id: 5,
-    image: "/Images/home/category/category_5.jpg",
-    title: "LINGERIE",
-    priceInfo: "Starts from INR 899",
+    href: "/category/lingerie",
+    image: "/Images/home/category/category_desktop_5.png",
+    altText: "lingerie image",
   },
   {
     id: 6,
-    image: "/Images/home/category/category_6.jpg",
-    title: "T-SHIRTS",
-    priceInfo: "Starts from INR 899",
+    href: "/category/tshirts",
+    image: "/Images/home/category/category_desktop_6.png",
+    altText: "tshirts image",
   },
 ];
 
@@ -99,43 +126,26 @@ export const saleData: SaleType[] = [
 export const newCollectionData: newCollectionType[] = [
   {
     id: 1,
-    title: `NEW ARRIVALS`,
-    price: 899,
-    image: "/Images/home/newCollection/one.png",
+    href: "/new-collections",
+    desktopImage: "/Images/home/newCollection/newCollection_desktop_1.png",
+    mobileImage: "/Images/home/newCollection/newCollection_mobile_1.png",
+    altText: "New Collections image",
   },
   {
     id: 2,
-    title: `SUMMER'24 WORDROBE`,
-    price: 899,
-    image: "/Images/home/newCollection/two.png",
+    href: "/new-collections",
+    desktopImage: "/Images/home/newCollection/newCollection_desktop_2.png",
+    mobileImage: "/Images/home/newCollection/newCollection_mobile_2.png",
+    altText: "New Collections image",
   },
 ];
 
 export const arrivalsData: arrivalsType = {
-  left: [
-    {
-      id: 1,
-      image: "/Images/home/arrivals/arrivals_1.jpg",
-    },
-    {
-      id: 2,
-      image: "/Images/home/arrivals/arrivals_2.jpg",
-    },
-    {
-      id: 3,
-      image: "/Images/home/arrivals/arrivals_3.jpg",
-    },
-  ],
-  right: [
-    {
-      id: 4,
-      image: "/Images/home/arrivals/arrivals_4.jpg",
-    },
-    {
-      id: 5,
-      image: "/Images/home/arrivals/arrivals_5.jpg",
-    },
-  ],
+  id: 1,
+  href: "/new-arrivals",
+  desktopImage: "/Images/home/arrivals/arrivals_desktop_main.png",
+  mobileImage: "/Images/home/arrivals/arrivals_mobile_main.png",
+  altText: "New arrivals image",
 };
 
 export const budgetData: BudgetType[] = [

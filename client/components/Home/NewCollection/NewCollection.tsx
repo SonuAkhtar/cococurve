@@ -1,21 +1,27 @@
+// NEXT
+import Link from "next/link";
+import Image from "next/image";
+
 import styles from "./newCollection.module.scss"; //SCSS
 import { newCollectionData } from "@/appData"; // appData
-
-// component
-import NewCollectionCard from "./NewCollectionCard/NewCollectionCard";
 
 const NewCollection = () => {
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
         {newCollectionData.map((item) => (
-          <NewCollectionCard
-            key={item.id}
-            id={item.id}
-            title={item.title}
-            price={item.price}
-            image={item.image}
-          />
+          <Link href={item.href}>
+            <picture>
+              <source media="(max-width: 576px)" srcSet={item.mobileImage} />
+              <Image
+                src={item.desktopImage}
+                alt={item.altText}
+                width={0}
+                height={0}
+                sizes="100vw"
+              />
+            </picture>
+          </Link>
         ))}
       </div>
     </div>

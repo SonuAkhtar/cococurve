@@ -1,22 +1,27 @@
-import styles from "./hero.module.scss"; //SCSS
-import { dm_serif_display } from "@/app/fonts"; // fonts
+// NEXT
+import Link from "next/link";
+import Image from "next/image";
 
-// components
-import Button from "@/components/Button/Button";
+import styles from "./hero.module.scss"; //SCSS
+
+import { heroData } from "@/appData";
 
 const Hero = () => {
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
-        <div className={styles.sale}>
-          <span className={styles.saleTitle}>Independence day sale</span>
-          <span className={styles.timer}>12:26:21</span>
-        </div>
-        <div className={`${styles.title} ${dm_serif_display.className}`}>
-          Steal the deal <br /> of the hour!
-        </div>
-        <div className={styles.terms}>Terms and conditions apply*</div>
-        <Button text="Shop Now" />
+        <Link href={heroData.href}>
+          <picture>
+            <source media="(max-width: 576px)" srcSet={heroData.mobileImage} />
+            <Image
+              src={heroData.desktopImage}
+              alt={heroData.altText}
+              width={0}
+              height={0}
+              sizes="100vw"
+            />
+          </picture>
+        </Link>
       </div>
     </div>
   );

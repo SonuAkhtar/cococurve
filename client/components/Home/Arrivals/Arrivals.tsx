@@ -1,25 +1,30 @@
+import Link from "next/link";
+import Image from "next/image";
+
 import styles from "./arrivals.module.scss"; // SCSS
 import { arrivalsData } from "@/appData"; // appData
 
 // component
-import ArrivalsCard from "./ArrivalsCard/ArrivalsCard";
 
 const Arrivals = () => {
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
-        <div className={styles.cards}>
-          <div className={styles.cards_left}>
-            {arrivalsData?.left?.map((item) => (
-              <ArrivalsCard key={item.id} id={item.id} image={item.image} />
-            ))}
-          </div>
-          <div className={styles.cards_right}>
-            {arrivalsData?.right?.map((item) => (
-              <ArrivalsCard key={item.id} id={item.id} image={item.image} />
-            ))}
-          </div>
-        </div>
+        <Link href={arrivalsData.href}>
+          <picture>
+            <source
+              media="(max-width: 576px)"
+              srcSet={arrivalsData.mobileImage}
+            />
+            <Image
+              src={arrivalsData.desktopImage}
+              alt={arrivalsData.altText}
+              width={0}
+              height={0}
+              sizes="100vw"
+            />
+          </picture>
+        </Link>
       </div>
     </div>
   );

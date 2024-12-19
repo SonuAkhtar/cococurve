@@ -1,26 +1,29 @@
+import React from "react";
+import Link from "next/link"; //NEXT
 import styles from "./section.module.scss"; //SCSS
+import { sectionData } from "@/appData"; //appData
 
 // components
-import Button from "@/components/Button/Button";
+import Image from "next/image";
 
 const Section = () => {
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
-        <div className={styles.women}>
-          <div className={styles.title}>
-            <span>SHOP FOR</span>
-            <h1>WOMEN</h1>
-          </div>
-          <Button text="Shop Now" />
-        </div>
-        <div className={styles.men}>
-          <div className={styles.title}>
-            <span>SHOP FOR</span>
-            <h1>MEN</h1>
-          </div>
-          <Button text="Shop Now" />
-        </div>
+        {sectionData.map((item) => (
+          <Link href={item.href}>
+            <picture>
+              <source media="(max-width: 576px)" srcSet={item.mobileImage} />
+              <Image
+                src={item.desktopImage}
+                alt={item.altText}
+                width={0}
+                height={0}
+                sizes="100vw"
+              />
+            </picture>
+          </Link>
+        ))}
       </div>
     </div>
   );

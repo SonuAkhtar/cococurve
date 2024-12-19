@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react"; // react
+import { useEffect, useState } from "react"; // react
 import styles from "./navbar.module.scss"; // SCSS
 import { menuCategoryList } from "@/appData"; // appData
 
@@ -9,30 +9,37 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 
 // components
-import Banner from "../Banner/Banner";
 import NavSearch from "../NavSearch/NavSearch";
 import Button from "../Button/Button";
 import DesktopMenu from "./DesktopMenu/DesktopMenu";
 import MobileMenu from "./MobileMenu/MobileMenu";
 import BurgerButton from "../BurgerButton/BurgerButton";
 
-const bannerText: string =
-  "USE FIRST15 TO GET 15% DISCOUNT ON YOUR FIRST ORDER";
-
 const Navbar = () => {
-  const [showDesktopMenu, setShowDesktopMenu] = useState(false);
-  const [showMobileMenu, setShowMobileMenu] = useState(false);
-  const [selectedNavItem, setSelectedNavItem] = useState("");
+  const [showDesktopMenu, setShowDesktopMenu] = useState<boolean>(false);
+  const [showMobileMenu, setShowMobileMenu] = useState<boolean>(false);
+  const [selectedNavItem, setSelectedNavItem] = useState<string>("");
+  const [isScrolled, setIsScrolled] = useState<boolean>(false);
 
   const handleMenuClick = (value: string) => {
     setShowDesktopMenu(!showDesktopMenu);
     setSelectedNavItem((prev) => (prev === value ? "" : value));
   };
 
-  return (
-    <div className={styles.container}>
-      <Banner text={bannerText} />
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) setIsScrolled(true);
+      else setIsScrolled(false);
+    };
 
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
+    <div
+      className={`${styles.container} ${isScrolled ? styles.scrolling : ""}`}
+    >
       <nav>
         <ul className={styles.category}>
           {Object.keys(menuCategoryList).map((value, idx) => (

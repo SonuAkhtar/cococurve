@@ -1,21 +1,30 @@
 @use "../../app/variables" as *;
 
 .container {
-  position: inherit;
+  // position: fixed;
+  // position: -webkit-sticky;
+  // top: 0;
+  // left: 0;
+  height: 2.5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: $MAIN_PURPLE;
   color: $MAIN_WHITE;
-  padding: 0.5rem 0;
+  width: 100%;
   z-index: 9999;
 
   .wrapper {
     font-size: 14px;
     line-height: 20px;
     font-weight: 700;
-    text-align: center;
     letter-spacing: 0.08em;
-    padding: 0 0.5rem;
+    text-align: center;
 
     @media screen and (max-width: $mobile) {
+      height: max-content;
+      padding: 0.25rem 0;
       font-size: 12px;
       line-height: 16px;
     }

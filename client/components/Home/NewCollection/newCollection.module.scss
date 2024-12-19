@@ -5,11 +5,27 @@
   height: 100%;
 
   .wrapper {
-    height: inherit;
     width: inherit;
+    height: inherit;
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    @media screen and (max-width: $mobile) {
+      flex-direction: column;
+    }
+
+    a {
+      flex: 1;
+      @media screen and (max-width: $mobile) {
+        width: 100%;
+      }
+
+      img {
+        display: block;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
   }
 }

@@ -1,8 +1,24 @@
+export interface HeroType {
+  id: number;
+  desktopImage: string;
+  mobileImage: string;
+  href: string;
+  altText: string;
+}
+
+export interface SectionType {
+  id: number;
+  href: string;
+  desktopImage: string;
+  mobileImage: string;
+  altText: string;
+}
+
 export interface CategoryType {
   id: number;
+  href: string;
   image: string;
-  title: string;
-  priceInfo: string;
+  altText: string;
 }
 
 export interface SaleType {
@@ -17,19 +33,18 @@ export interface SaleType {
 
 export interface newCollectionType {
   id: number;
-  title: string;
-  price: number;
-  image: string;
-}
-
-export interface arrivalsItem {
-  id: number;
-  image: string;
+  href: string;
+  desktopImage: string;
+  mobileImage: string;
+  altText: string;
 }
 
 export interface arrivalsType {
-  left: arrivalsItem[];
-  right: arrivalsItem[];
+  id: number;
+  href: string;
+  desktopImage: string;
+  mobileImage: string;
+  altText: string;
 }
 
 export interface BudgetType {

@@ -1,25 +1,23 @@
 @use "../../app/variables" as *;
 
 .container {
-  position: relative;
-  background-image: linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0.3),
-      rgba(0, 0, 0, 0.3)
-    ),
-    linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%),
-    url("/Images/home/hero/hero.png");
-
-  background-position: 50% 30%;
-  background-repeat: no-repeat;
-  background-size: cover;
+  position: fixed;
+  position: -webkit-sticky;
+  top: 2.5rem;
+  left: 0;
+  width: 100%;
+  transition: all 0.2s ease-in-out;
 
   @media screen and (max-width: $mobile) {
     height: 10vh;
-    z-index: 9999;
+  }
+
+  &.scrolling {
+    top: 0;
   }
 
   nav {
+    position: relative;
     width: 100%;
     height: fit-content;
     min-height: 76px;
@@ -29,6 +27,7 @@
     justify-content: space-between;
     color: $MAIN_WHITE;
     backdrop-filter: blur(64px);
+    z-index: 9999;
 
     ul {
       list-style: none;

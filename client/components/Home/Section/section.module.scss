@@ -8,76 +8,23 @@
     width: inherit;
     height: inherit;
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-
-    .women,
-    .men {
-      height: 85vh;
-      flex: 1 1 50%;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      display: flex;
+    @media screen and (max-width: $mobile) {
       flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 3rem;
-      color: $MAIN_WHITE;
+    }
 
+    a {
+      flex: 1;
       @media screen and (max-width: $mobile) {
-        height: 65vh;
-        flex: 1 1 100%;
-        gap: 1.5rem;
-      }
-    }
-
-    .women {
-      background-image: url("/Images/home/section/women.png");
-    }
-    .men {
-      background-image: url("/Images/home/section/men.png");
-    }
-
-    .title {
-      margin-top: 20vh;
-      text-align: center;
-
-      span {
-        position: relative;
-        font-size: 24px;
-        font-weight: 700;
-        line-height: 28px;
-        letter-spacing: 0.08em;
-        padding: 0.25rem 2rem;
-        z-index: 99;
-      }
-
-      h1 {
-        position: relative;
         width: 100%;
-        font-size: 120px;
-        font-weight: 600;
-        line-height: 140px;
-        letter-spacing: -0.04em;
-        text-shadow: 1px 1px 0 $ALPHA_BLACK_02, -1px -1px 0 $ALPHA_BLACK_02,
-          1px -1px 0 $ALPHA_BLACK_02, -1px 1px 0 $ALPHA_BLACK_02;
+      }
 
-        @media screen and (max-width: $mobile) {
-          font-size: 80px;
-          line-height: 92px;
-        }
-
-        &::before {
-          position: absolute;
-          content: "";
-          top: -14px;
-          left: 0;
-          background-color: $MAIN_WHITE;
-          height: 1px;
-          width: 100%;
-        }
+      img {
+        display: block;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
       }
     }
   }

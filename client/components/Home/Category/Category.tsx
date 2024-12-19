@@ -1,21 +1,23 @@
+import Link from "next/link";
+import Image from "next/image";
+
 import styles from "./category.module.scss"; //SCSS
 import { categoryData } from "@/appData"; // appData
-
-// components
-import CategoryCard from "./CategoryCard/CategoryCard";
 
 const Category = () => {
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
         {categoryData.map((item) => (
-          <CategoryCard
-            key={item.id}
-            id={item.id}
-            image={item.image}
-            title={item.title}
-            priceInfo={item.priceInfo}
-          />
+          <Link href={item.href}>
+            <Image
+              src={item.image}
+              alt={item.altText}
+              width={0}
+              height={0}
+              sizes="100vw"
+            />
+          </Link>
         ))}
       </div>
     </div>
