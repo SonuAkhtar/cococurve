@@ -14,7 +14,7 @@
       flex-direction: column;
     }
 
-    a {
+    .data_items {
       flex: 1;
       @media screen and (max-width: $mobile) {
         width: 100%;

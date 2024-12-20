@@ -11,13 +11,12 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-
     @media screen and (max-width: $mobile) {
       padding: 0.25rem 0;
       flex-direction: column;
     }
 
-    a {
+    .data_items {
       flex: 1 0 33.33%;
       max-width: 33.33%;
       height: auto;
@@ -28,7 +27,8 @@
       }
 
       @media screen and (max-width: $mobile) {
-        width: 100%;
+        flex: 1 0 100%;
+        max-width: 100%;
       }
 
       img {

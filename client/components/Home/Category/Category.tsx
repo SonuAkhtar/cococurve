@@ -9,7 +9,7 @@ const Category = () => {
     <div className={styles.container}>
       <div className={styles.wrapper}>
         {categoryData.map((item) => (
-          <div>
+          <div className={styles.data_items} key={item.id}>
             <Link href={item.href}>
               <picture>
                 <source media="(max-width: 576px)" srcSet={item.mobileImage} />

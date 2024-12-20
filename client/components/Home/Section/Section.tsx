@@ -11,18 +11,20 @@ const Section = () => {
     <div className={styles.container}>
       <div className={styles.wrapper}>
         {sectionData.map((item) => (
-          <Link href={item.href}>
-            <picture>
-              <source media="(max-width: 576px)" srcSet={item.mobileImage} />
-              <Image
-                src={item.desktopImage}
-                alt={item.altText}
-                width={0}
-                height={0}
-                sizes="100vw"
-              />
-            </picture>
-          </Link>
+          <div key={item.id} className={styles.data_items}>
+            <Link href={item.href}>
+              <picture>
+                <source media="(max-width: 576px)" srcSet={item.mobileImage} />
+                <Image
+                  src={item.desktopImage}
+                  alt={item.altText}
+                  width={0}
+                  height={0}
+                  sizes="100vw"
+                />
+              </picture>
+            </Link>
+          </div>
         ))}
       </div>
     </div>
