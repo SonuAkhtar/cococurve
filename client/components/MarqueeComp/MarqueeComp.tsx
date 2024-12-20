@@ -5,7 +5,11 @@ import Marquee from "react-fast-marquee";
 
 import styles from "./marqueeComp.module.scss"; // SCSS
 
-const MarqueeComp = ({ children }: any) => {
+interface MyComponentProps {
+  children: React.ReactNode;
+}
+
+const MarqueeComp = ({ children }: MyComponentProps) => {
   return (
     <Marquee
       autoFill={true}
