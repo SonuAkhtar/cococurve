@@ -1,15 +1,12 @@
 "use client";
 
-// import Packages
-import { Slide } from "react-slideshow-image";
-import "react-slideshow-image/dist/styles.css";
-
 import styles from "./sale.module.scss"; // SCSS
 import { saleData } from "@/appData"; // appData
 
 // component
 import Button from "@/components/Button/Button";
 import SaleCard from "./SaleCard/SaleCard";
+import MarqueeComp from "@/components/MarqueeComp/MarqueeComp";
 
 const Sale = () => {
   return (
@@ -21,8 +18,8 @@ const Sale = () => {
           <h3 className={styles.subtitle}>On all women apparels</h3>
         </div>
         <div className={styles.cards_wrapper}>
-          <div className={styles.cards}>
-            <Slide>
+          <MarqueeComp>
+            <div className={styles.cards}>
               {saleData.map((item) => (
                 <SaleCard
                   key={item.id}
@@ -35,8 +32,8 @@ const Sale = () => {
                   off={item.off}
                 />
               ))}
-            </Slide>
-          </div>
+            </div>
+          </MarqueeComp>
         </div>
         <Button text="View All" />
       </div>

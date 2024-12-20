@@ -4,6 +4,7 @@ import { budgetData } from "@/appData"; // appData
 // component
 import Button from "@/components/Button/Button";
 import BudgetCard from "./BudgetCard/BudgetCard";
+import MarqueeComp from "@/components/MarqueeComp/MarqueeComp";
 
 const Budget = () => {
   return (
@@ -14,20 +15,22 @@ const Budget = () => {
           <h1 className={styles.offer}>BUDGET UNDER 999.</h1>
         </div>
         <div className={styles.cards_wrapper}>
-          <div className={styles.cards}>
-            {budgetData.map((item) => (
-              <BudgetCard
-                key={item.id}
-                id={item.id}
-                image={item.image}
-                rating={item.rating}
-                title={item.title}
-                newPrice={item.newPrice}
-                oldPrice={item.oldPrice}
-                off={item.off}
-              />
-            ))}
-          </div>
+          <MarqueeComp>
+            <div className={styles.cards}>
+              {budgetData.map((item) => (
+                <BudgetCard
+                  key={item.id}
+                  id={item.id}
+                  image={item.image}
+                  rating={item.rating}
+                  title={item.title}
+                  newPrice={item.newPrice}
+                  oldPrice={item.oldPrice}
+                  off={item.off}
+                />
+              ))}
+            </div>
+          </MarqueeComp>
         </div>
         <Button text="View All" />
       </div>
