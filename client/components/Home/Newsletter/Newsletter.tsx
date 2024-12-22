@@ -8,11 +8,8 @@ const Newsletter = () => {
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
-        <h2 className={styles.title}>
-          Subscribe to our newsletter
-          <br />
-          for latest trend updates.
-        </h2>
+        <h2 className={styles.title}>Join our community with a email.</h2>
+        <h4>Get exciting updates on fashion, trends, sale, and more.</h4>
         <div className={styles.emailBox}>
           <FontAwesomeIcon className={styles.letterIcon} icon={faEnvelope} />
           <input type="text" placeholder="Enter you Email" />
