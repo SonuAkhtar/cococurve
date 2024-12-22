@@ -5,11 +5,11 @@ import Marquee from "react-fast-marquee";
 
 import styles from "./marqueeComp.module.scss"; // SCSS
 
-interface MyComponentProps {
+interface MarqueeProps {
   children: React.ReactNode;
 }
 
-const MarqueeComp = ({ children }: MyComponentProps) => {
+const MarqueeComp = ({ children }: MarqueeProps) => {
   return (
     <Marquee
       autoFill={true}
@@ -17,7 +17,7 @@ const MarqueeComp = ({ children }: MyComponentProps) => {
       speed={100}
       className={styles.container}
       gradient={true}
-      gradientWidth={100}
+      gradientWidth={30}
       gradientColor="#b6b8bc"
     >
       {children}
