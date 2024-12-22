@@ -5,6 +5,7 @@
   // position: -webkit-sticky;
   // top: 0;
   // left: 0;
+  position: relative;
   height: 2.5rem;
   width: 100%;
   display: flex;
@@ -12,7 +13,6 @@
   justify-content: center;
   background-color: $MAIN_PURPLE;
   color: $MAIN_WHITE;
-  width: 100%;
   z-index: 99999;
 
   .wrapper {

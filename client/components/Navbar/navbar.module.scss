@@ -22,7 +22,7 @@
     position: relative;
     width: 100%;
     height: fit-content;
-    min-height: 76px;
+    min-height: $NAVBAR_HEIGHT;
     padding: 0 5%;
     display: flex;
     align-items: center;
@@ -30,8 +30,10 @@
     color: $MAIN_WHITE;
     background: $ALPHA_BLACK_03;
     backdrop-filter: blur(64px);
+    z-index: 99999;
 
     ul {
+      height: $NAVBAR_HEIGHT;
       list-style: none;
       display: flex;
       align-items: center;
@@ -43,6 +45,7 @@
       }
 
       li {
+        height: inherit;
         display: flex;
         align-items: center;
         justify-content: center;

@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link"; // Next
 import { useEffect, useState } from "react"; // react
 import styles from "./navbar.module.scss"; // SCSS
 import { menuCategoryList } from "@/appData"; // appData
@@ -21,8 +22,13 @@ const Navbar = () => {
   const [selectedNavItem, setSelectedNavItem] = useState<string>("");
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
 
-  const handleMenuClick = (value: string) => {
-    setShowDesktopMenu(!showDesktopMenu);
+  const handleMouseEnter = (value: string) => {
+    setShowDesktopMenu(true);
+    setSelectedNavItem((prev) => (prev === value ? "" : value));
+  };
+
+  const handleMouseLeave = (value: string) => {
+    setShowDesktopMenu(false);
     setSelectedNavItem((prev) => (prev === value ? "" : value));
   };
 
@@ -43,8 +49,12 @@ const Navbar = () => {
       <nav>
         <ul className={styles.category}>
           {Object.keys(menuCategoryList).map((value, idx) => (
-            <li key={idx} onClick={() => handleMenuClick(value)}>
-              {value}
+            <li
+              key={idx}
+              onMouseEnter={() => handleMouseEnter(value)}
+              onMouseLeave={() => handleMouseLeave(value)}
+            >
+              <Link href={`/${value}`}>{value}</Link>
               <FontAwesomeIcon
                 className={selectedNavItem === value ? styles.active : ""}
                 icon={faAngleDown}

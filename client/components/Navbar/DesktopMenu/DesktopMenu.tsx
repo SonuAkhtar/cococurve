@@ -5,7 +5,7 @@ import { desktopMenuPropsType } from "@/types"; // type
 
 // fontawesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 const DesktopMenu = ({
   showDesktopMenu,
@@ -33,7 +33,7 @@ const DesktopMenu = ({
             <h2>Tops</h2>
             {currentMenuData.tops.map((item) => (
               <h4 key={item.id}>
-                {item.name} <FontAwesomeIcon icon={faAngleRight} />
+                {item.name} <FontAwesomeIcon icon={faArrowRight} />
               </h4>
             ))}
           </div>
@@ -41,7 +41,7 @@ const DesktopMenu = ({
             <h2>Bottoms</h2>
             {currentMenuData.bottoms.map((item) => (
               <h4 key={item.id}>
-                {item.name} <FontAwesomeIcon icon={faAngleRight} />
+                {item.name} <FontAwesomeIcon icon={faArrowRight} />
               </h4>
             ))}
           </div>
@@ -51,7 +51,7 @@ const DesktopMenu = ({
             <h2>bodySuits</h2>
             {currentMenuData.bodySuits.map((item) => (
               <h4 key={item.id}>
-                {item.name} <FontAwesomeIcon icon={faAngleRight} />
+                {item.name} <FontAwesomeIcon icon={faArrowRight} />
               </h4>
             ))}
           </div>
@@ -59,7 +59,7 @@ const DesktopMenu = ({
             <h2>Dresses</h2>
             {currentMenuData.dresses.map((item) => (
               <h4 key={item.id}>
-                {item.name} <FontAwesomeIcon icon={faAngleRight} />
+                {item.name} <FontAwesomeIcon icon={faArrowRight} />
               </h4>
             ))}
           </div>
@@ -73,7 +73,7 @@ const DesktopMenu = ({
             <h2>Jewelry</h2>
             {currentMenuData.jewelry.map((item) => (
               <h4 key={item.id}>
-                {item.name} <FontAwesomeIcon icon={faAngleRight} />
+                {item.name} <FontAwesomeIcon icon={faArrowRight} />
               </h4>
             ))}
           </div>
@@ -81,7 +81,7 @@ const DesktopMenu = ({
             <h2>Winters</h2>
             {currentMenuData.winters.map((item) => (
               <h4 key={item.id}>
-                {item.name} <FontAwesomeIcon icon={faAngleRight} />
+                {item.name} <FontAwesomeIcon icon={faArrowRight} />
               </h4>
             ))}
           </div>
@@ -91,7 +91,7 @@ const DesktopMenu = ({
             <h2>Jackets</h2>
             {currentMenuData.jackets.map((item) => (
               <h4 key={item.id}>
-                {item.name} <FontAwesomeIcon icon={faAngleRight} />
+                {item.name} <FontAwesomeIcon icon={faArrowRight} />
               </h4>
             ))}
           </div>
@@ -99,7 +99,7 @@ const DesktopMenu = ({
             <h2>Lingerie</h2>
             {currentMenuData.lingerie.map((item) => (
               <h4 key={item.id}>
-                {item.name} <FontAwesomeIcon icon={faAngleRight} />
+                {item.name} <FontAwesomeIcon icon={faArrowRight} />
               </h4>
             ))}
           </div>
