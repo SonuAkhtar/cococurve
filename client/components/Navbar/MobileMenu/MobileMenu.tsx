@@ -5,7 +5,7 @@ import { MenuCategoryType, mobileMenuPropsType } from "@/types"; // type
 
 // fontawesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import { faAngleDown, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 // components
 import NavSearch from "@/components/NavSearch/NavSearch";
@@ -49,7 +49,7 @@ const MobileMenu = ({ showMobileMenu }: mobileMenuPropsType) => {
               >
                 {menuCategoryList[item as keyof MenuCategoryType].map((val) => (
                   <div key={val.id} className={styles.category_item_box_item}>
-                    {val.name} <FontAwesomeIcon icon={faAngleDown} />
+                    {val.name} <FontAwesomeIcon icon={faArrowRight} />
                   </div>
                 ))}
               </div>
