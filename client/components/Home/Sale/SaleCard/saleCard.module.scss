@@ -8,10 +8,9 @@
   flex-direction: column;
   flex-shrink: 0;
   border-radius: 0.25rem;
-  transition: all 0.5s ease-in-out;
   cursor: pointer;
 
-  &:hover {
+  &:hover .image {
     transform: scale(1.1);
   }
 
@@ -26,6 +25,7 @@
     align-items: flex-end;
     justify-content: space-between;
     padding: 0.5rem;
+    transition: all 0.5s ease-in-out;
 
     .rating {
       font-size: 16px;

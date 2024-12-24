@@ -1,6 +1,9 @@
 "use client";
 
-import Link from "next/link"; // Next
+// Next
+import Link from "next/link";
+import Image from "next/image";
+
 import { useEffect, useState } from "react"; // react
 import styles from "./navbar.module.scss"; // SCSS
 import { menuCategoryList } from "@/appData"; // appData
@@ -8,6 +11,10 @@ import { menuCategoryList } from "@/appData"; // appData
 // fontawesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
+
+// Images
+import desktopLogo from "/Images/Cococurve-logo_desktop.png";
+import mobileLogo from "/Images/Cococurve-logo_mobile.png";
 
 // components
 import NavSearch from "../NavSearch/NavSearch";
@@ -62,7 +69,21 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-        <div className={styles.logo}>COCOCURVE</div>
+        <Link href="/" className={styles.logo}>
+          <picture>
+            <source
+              media="(max-width: 576px)"
+              srcSet="/Images/Cococurve-logo_desktop.png"
+            />
+            <Image
+              src="/Images/Cococurve-logo_desktop.png"
+              alt="Cococurve logo"
+              width={0}
+              height={0}
+              sizes="100vw"
+            />
+          </picture>
+        </Link>
 
         <div className={styles.search}>
           <NavSearch />
