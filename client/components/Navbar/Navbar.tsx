@@ -12,10 +12,6 @@ import { menuCategoryList } from "@/appData"; // appData
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 
-// Images
-import desktopLogo from "/Images/Cococurve-logo_desktop.png";
-import mobileLogo from "/Images/Cococurve-logo_mobile.png";
-
 // components
 import NavSearch from "../NavSearch/NavSearch";
 import Button from "../Button/Button";
@@ -77,7 +73,7 @@ const Navbar = () => {
             />
             <Image
               src="/Images/Cococurve-logo_desktop.png"
-              alt="Cococurve logo"
+              alt="Cococurve logo image"
               width={0}
               height={0}
               sizes="100vw"
