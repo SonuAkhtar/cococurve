@@ -73,7 +73,7 @@ const Navbar = () => {
             />
             <Image
               src="/Images/Cococurve-logo_desktop.png"
-              alt="Cococurve logo image"
+              alt="Cococurve logo"
               width={0}
               height={0}
               sizes="100vw"
