@@ -1,5 +1,3 @@
-import { roboto } from "./fonts";
-
 // fontawesome setup
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
@@ -16,6 +14,14 @@ import Footer from "@/components/Footer/Footer";
 export const metadata: Metadata = {
   title: "CocoCurve",
   description: "Your only destination for fashion",
+  icons: {
+    icon: "/favicon-16x16.png",
+  },
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1.0,
 };
 
 const bannerText: string =
@@ -27,7 +33,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={roboto.className}>
+    <html lang="en">
       <body>
         <Banner text={bannerText} />
 
