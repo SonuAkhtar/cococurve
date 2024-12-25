@@ -1,10 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.scss"; // SCSS
 
-// fontawesome
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCopy } from "@fortawesome/free-regular-svg-icons";
-
 // components
 import Button from "@/components/Button/Button";
 
