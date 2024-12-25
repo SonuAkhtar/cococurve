@@ -67,12 +67,9 @@ const Navbar = () => {
         </ul>
         <Link href="/" className={styles.logo}>
           <picture>
-            <source
-              media="(max-width: 576px)"
-              srcSet="/Images/Cococurve-logo_desktop.png"
-            />
+            <source media="(max-width: 576px)" srcSet="/Images/Logo.svg" />
             <Image
-              src="/Images/Cococurve-logo_desktop.png"
+              src="/Images/Logo.svg"
               alt="Cococurve logo"
               width={0}
               height={0}

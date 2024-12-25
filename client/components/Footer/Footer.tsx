@@ -9,6 +9,8 @@ import {
   faTwitter,
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
+import Link from "next/link";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -34,7 +36,18 @@ const Footer = () => {
           <div className={styles.copyright}>
             © 2024 CocoCurve. All rights reserved.
           </div>
-          <div className={styles.logo}>COCOCURVE</div>
+          <Link href="/" className={styles.logo}>
+            <picture>
+              <source media="(max-width: 576px)" srcSet="/Images/Logo.svg" />
+              <Image
+                src="/Images/Logo.svg"
+                alt="Cococurve logo"
+                width={0}
+                height={0}
+                sizes="100vw"
+              />
+            </picture>
+          </Link>
           <div className={styles.terms}>
             <span>TERMS OF SERVICE</span>
             <span>PRIVACY POLICY</span>

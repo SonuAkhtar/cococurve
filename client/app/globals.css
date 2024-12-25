@@ -3,19 +3,43 @@
   src: url("/fonts/lemon_milk/LEMONMILK-Bold.otf") format("otf");
 }
 
+/* thiccboi */
 @font-face {
-  font-family: "thiccboi";
-  src: url("/fonts/thicccboi/Webfont/THICCCBOI-Regular.woff2") format("woff2"),
-    url("/fonts/thicccboi/TTF/THICCCBOI-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
+  font-family: "thiccboi-black";
+  src: url("/fonts/thicccboi/Webfont/THICCCBOI-Black.woff2") format("woff2"),
+    url("/fonts/thicccboi/TTF/THICCCBOI-Black.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "thiccboi-semiBold";
+  src: url("/fonts/thicccboi/Webfont/THICCCBOI-SemiBold.woff2") format("woff2"),
+    url("/fonts/thicccboi/TTF/THICCCBOI-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "thiccboi-bold";
+  src: url("/fonts/thicccboi/Webfont/THICCCBOI-Bold.woff2") format("woff2"),
+    url("/fonts/thicccboi/TTF/THICCCBOI-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "thiccboi-light";
+  src: url("/fonts/thicccboi/Webfont/THICCCBOI-Light.woff2") format("woff2"),
+    url("/fonts/thicccboi/TTF/THICCCBOI-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "thiccboi-regular";
+  src: url("/fonts/thicccboi/Webfont/THICCCBOI-Regular.woff2") format("woff2"),
+    url("/fonts/thicccboi/TTF/THICCCBOI-Regular.ttf") format("truetype");
+}
+
+/* Global Style */
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: "thiccboi", sans-serif;
+  font-family: "thiccboi-regular", sans-serif;
 }
 
 html,

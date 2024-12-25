@@ -33,11 +33,11 @@
     z-index: 99999;
 
     ul {
+      width: 480px;
       height: $NAVBAR_HEIGHT;
       list-style: none;
       display: flex;
       align-items: center;
-      justify-content: space-between;
       gap: 2rem;
 
       @media screen and (max-width: $mobile) {
@@ -76,9 +76,10 @@
     }
 
     .search {
+      width: 480px;
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-end;
       gap: 1.5rem;
 
       @media screen and (max-width: $mobile) {
