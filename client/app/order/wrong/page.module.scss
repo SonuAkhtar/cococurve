@@ -4,7 +4,7 @@
   width: 100%;
   height: 100%;
   margin-top: 76px;
-  background-color: $BLUE_50;
+  background-color: $ERROR_50;
 
   .wrapper {
     height: 100%;
@@ -21,7 +21,7 @@
       object-fit: cover;
     }
 
-    .confirm_box {
+    .error_box {
       width: 50%;
       background-color: $MAIN_WHITE;
       display: flex;
@@ -37,16 +37,15 @@
         padding: 3rem 1rem;
       }
 
-      .confirm_icon {
-        height: 100px;
-        width: 100px;
+      .error_icon {
+        height: 160px;
+        width: 210px;
       }
 
       h2 {
         font-family: "thiccboi-semiBold", sans-serif;
         font-size: 40px;
         line-height: 48px;
-        letter-spacing: 0.04em;
         @media screen and (max-width: $tablet) {
           font-size: 30px;
           line-height: 40px;
@@ -55,9 +54,12 @@
 
       h5 {
         margin-top: 0.5rem;
-        font-size: 12px;
-        line-height: 14px;
+        font-size: 14px;
+        line-height: 20px;
         color: $GRAY_COOL_400;
+        span {
+          font-family: "thiccboi-semiBold", sans-serif;
+        }
       }
 
       button {
