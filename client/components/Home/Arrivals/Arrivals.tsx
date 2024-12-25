@@ -13,7 +13,7 @@ const Arrivals = () => {
         <Link href={arrivalsData.href}>
           <picture>
             <source
-              media="(max-width: 576px)"
+              media="(max-width: 600px)"
               srcSet={arrivalsData.mobileImage}
             />
             <Image

@@ -14,7 +14,7 @@ const Section = () => {
           <div key={item.id} className={styles.data_items}>
             <Link href={item.href}>
               <picture>
-                <source media="(max-width: 576px)" srcSet={item.mobileImage} />
+                <source media="(max-width: 600px)" srcSet={item.mobileImage} />
                 <Image
                   src={item.desktopImage}
                   alt={item.altText}

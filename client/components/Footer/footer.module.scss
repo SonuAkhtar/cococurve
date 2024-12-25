@@ -5,8 +5,8 @@
   color: $MAIN_WHITE;
   padding: 4rem 5rem;
 
-  @media screen and (max-width: $mobile) {
-    padding: 4rem 1.5rem;
+  @media screen and (max-width: $desktop) {
+    padding: 4rem 2rem;
   }
 
   .wrapper {
@@ -19,8 +19,7 @@
       align-items: center;
       justify-content: space-between;
       gap: 2rem;
-
-      @media screen and (max-width: $mobile) {
+      @media screen and (max-width: $tablet) {
         flex-direction: column;
         align-items: flex-start;
       }
@@ -29,12 +28,8 @@
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        justify-content: space-between;
         gap: 2.5rem;
-
-        @media screen and (max-width: $mobile) {
-          width: 100%;
-          justify-content: flex-start;
+        @media screen and (max-width: $desktop) {
           gap: 1.5rem;
         }
 
@@ -54,7 +49,7 @@
         justify-content: center;
         gap: 2.5rem;
 
-        @media screen and (max-width: $mobile) {
+        @media screen and (max-width: $tablet) {
           gap: 1.5rem;
         }
 
@@ -77,7 +72,7 @@
       align-items: center;
       justify-content: space-between;
 
-      @media screen and (max-width: $mobile) {
+      @media screen and (max-width: $tablet) {
         flex-direction: column-reverse;
         align-items: flex-start;
         gap: 0.75rem;
@@ -93,14 +88,10 @@
       .logo {
         line-height: 1;
         img {
-          height: 30px;
+          height: 100%;
           width: 100%;
           object-fit: cover;
           cursor: pointer;
-
-          @media screen and (max-width: $mobile) {
-            height: 100%;
-          }
         }
       }
 

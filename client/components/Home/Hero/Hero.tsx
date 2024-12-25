@@ -12,7 +12,7 @@ const Hero = () => {
       <div className={styles.wrapper}>
         <Link href={heroData.href}>
           <picture>
-            <source media="(max-width: 576px)" srcSet={heroData.mobileImage} />
+            <source media="(max-width: 600px)" srcSet={heroData.mobileImage} />
             <Image
               src={heroData.desktopImage}
               alt={heroData.altText}

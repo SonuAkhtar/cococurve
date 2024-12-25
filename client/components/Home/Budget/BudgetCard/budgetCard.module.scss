@@ -37,7 +37,15 @@
     }
 
     svg {
-      color: $MAIN_WHITE;
+      &:nth-child(1) {
+        margin-left: 0.25rem;
+        color: $YELLOW_500;
+      }
+      &:nth-child(2) {
+        color: $MAIN_WHITE;
+        cursor: pointer;
+        padding-bottom: 0.5rem;
+      }
     }
   }
 

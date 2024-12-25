@@ -3,7 +3,7 @@ import { SaleType } from "@/types"; // type
 
 // fontawesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeart, faStar } from "@fortawesome/free-solid-svg-icons";
+import { faHeart, faStar } from "@fortawesome/free-regular-svg-icons";
 
 const SaleCard = ({
   image,

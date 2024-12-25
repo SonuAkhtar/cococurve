@@ -17,6 +17,12 @@
     background-color: transparent;
     color: $MAIN_WHITE;
     font-size: 1.25rem;
+    @media screen and (max-width: $desktop) {
+      width: 170px;
+    }
+    @media screen and (max-width: $tablet) {
+      width: max-content;
+    }
 
     &::placeholder {
       color: $ALPHA_WHITE_05;

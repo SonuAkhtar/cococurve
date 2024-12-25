@@ -11,7 +11,7 @@
   background-color: $ALPHA_WHITE_01;
   border-radius: 0.25rem;
 
-  @media screen and (min-width: $mobile) {
+  @media screen and (min-width: $tablet) {
     display: none;
   }
 }

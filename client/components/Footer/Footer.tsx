@@ -38,7 +38,7 @@ const Footer = () => {
           </div>
           <Link href="/" className={styles.logo}>
             <picture>
-              <source media="(max-width: 576px)" srcSet="/Images/Logo.svg" />
+              <source media="(max-width: 600px)" srcSet="/Images/Logo.svg" />
               <Image
                 src="/Images/Logo.svg"
                 alt="Cococurve logo"

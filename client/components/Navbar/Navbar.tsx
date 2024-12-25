@@ -3,6 +3,7 @@
 // Next
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 import { useEffect, useState } from "react"; // react
 import styles from "./navbar.module.scss"; // SCSS
@@ -20,6 +21,7 @@ import MobileMenu from "./MobileMenu/MobileMenu";
 import BurgerButton from "../BurgerButton/BurgerButton";
 
 const Navbar = () => {
+  const pathname = usePathname();
   const [showDesktopMenu, setShowDesktopMenu] = useState<boolean>(false);
   const [showMobileMenu, setShowMobileMenu] = useState<boolean>(false);
   const [selectedNavItem, setSelectedNavItem] = useState<string>("");
@@ -47,7 +49,9 @@ const Navbar = () => {
 
   return (
     <div
-      className={`${styles.container} ${isScrolled ? styles.scrolling : ""}`}
+      className={`${styles.container} ${isScrolled && styles.scrolling} ${
+        pathname !== "/" && styles.navOtherPages
+      }`}
     >
       <nav>
         <ul className={styles.category}>
@@ -67,7 +71,7 @@ const Navbar = () => {
         </ul>
         <Link href="/" className={styles.logo}>
           <picture>
-            <source media="(max-width: 576px)" srcSet="/Images/Logo.svg" />
+            <source media="(max-width: 768px)" srcSet="/Images/Logo.svg" />
             <Image
               src="/Images/Logo.svg"
               alt="Cococurve logo"

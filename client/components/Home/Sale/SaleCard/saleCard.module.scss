@@ -28,16 +28,26 @@
     transition: background-size 0.5s ease-in-out;
 
     .rating {
+      font-family: "thiccboi-semiBold", sans-serif;
       font-size: 16px;
       font-weight: 700;
       line-height: 20px;
       padding: 0.25rem 0.5rem;
       border-radius: 1rem;
       background-color: $YELLOW_300;
+      color: $YELLOW_900;
     }
 
     svg {
-      color: $MAIN_WHITE;
+      &:nth-child(1) {
+        margin-left: 0.25rem;
+        color: $YELLOW_500;
+      }
+      &:nth-child(2) {
+        color: $MAIN_WHITE;
+        cursor: pointer;
+        padding-bottom: 0.5rem;
+      }
     }
   }
 
