@@ -3,10 +3,13 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false;
 
+import "./globals.css"; // CSS
 import type { Metadata } from "next";
-import "./globals.css";
+
+import { bannerText } from "@/appData"; //appData
 
 // components
+import { StoreProvider } from "@/redux/storeProvider";
 import Banner from "@/components/Banner/Banner";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
@@ -24,23 +27,22 @@ export const viewport = {
   initialScale: 1.0,
 };
 
-const bannerText: string =
-  "USE FIRST15 TO GET 15% DISCOUNT ON YOUR FIRST ORDER";
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>
-        <Banner text={bannerText} />
+    <StoreProvider>
+      <html lang="en">
+        <body>
+          <Banner text={bannerText} />
 
-        <Navbar />
-        {children}
-        <Footer />
-      </body>
-    </html>
+          <Navbar />
+          {children}
+          <Footer />
+        </body>
+      </html>
+    </StoreProvider>
   );
 }

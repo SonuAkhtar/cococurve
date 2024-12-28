@@ -1,8 +1,9 @@
-import Image from "next/image";
+import Image from "next/image"; // Next
 import styles from "./page.module.scss"; // SCSS
 
 // components
 import Button from "@/components/Button/Button";
+import Newsletter from "@/components/Newsletter/Newsletter";
 
 const OrderWrong = () => {
   return (
@@ -27,6 +28,7 @@ const OrderWrong = () => {
           <Button text="Go back" />
         </div>
       </div>
+      <Newsletter />
     </div>
   );
 };

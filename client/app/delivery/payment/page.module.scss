@@ -1,0 +1,155 @@
+@use "../../../app/variables" as *;
+
+.container {
+  width: 100%;
+  height: 100%;
+  background-color: $MAIN_WHITE;
+
+  .wrapper {
+    height: 100%;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      display: block;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    main {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      @media screen and (max-width: $desktop) {
+        padding: 0 1rem;
+      }
+      @media screen and (max-width: $tablet) {
+        flex-direction: column;
+      }
+
+      .payment_method {
+        flex: 2;
+        min-height: 100%;
+        background-color: $GRAY_COOL_50;
+        padding: 2.5rem 5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+        @media screen and (max-width: $desktop) {
+          padding: 1.5rem 0;
+        }
+        @media screen and (max-width: $mobile) {
+          gap: 1.5rem;
+        }
+
+        .payment_method_header {
+          h2 {
+            font-family: "thiccboi-semiBold", sans-serif;
+            font-size: 32px;
+            line-height: 40px;
+            letter-spacing: -0.04em;
+            @media screen and (max-width: $mobile) {
+              font-size: 24px;
+              line-height: 32px;
+            }
+          }
+          h5 {
+            font-size: 14px;
+            line-height: 20px;
+            color: $GRAY_COOL_500;
+          }
+        }
+
+        .payment_method_cards {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 1rem;
+          @media screen and (max-width: $desktop) {
+            flex-direction: column;
+            align-items: center;
+          }
+        }
+
+        .payment_method_terms {
+          font-size: 14px;
+          line-height: 20px;
+          color: $GRAY_COOL_500;
+        }
+      }
+
+      .payment_summery {
+        flex: 1;
+        min-height: 100%;
+        padding: 4rem 2.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2.5rem;
+        background-color: $MAIN_WHITE;
+        @media screen and (max-width: $tablet) {
+          padding: 1.5rem;
+          flex-direction: column-reverse;
+          border: 1px solid $GRAY_COOL_200;
+          margin-bottom: 1rem;
+        }
+
+        .payment_summery_box {
+          width: 100%;
+          height: 70vh;
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          padding-bottom: 1rem;
+          border-bottom: 1px solid $GRAY_COOL_200;
+          @media screen and (max-width: $tablet) {
+            height: max-content;
+          }
+
+          .payment_summery_box_item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            span {
+              font-family: "thiccboi-semiBold", sans-serif;
+              font-size: 16px;
+              line-height: 20px;
+            }
+
+            h3 {
+              font-family: "thiccboi-semiBold", sans-serif;
+              font-size: 20px;
+              line-height: 28px;
+
+              span {
+                font-family: "thiccboi-regular", sans-serif;
+                font-size: 14px;
+                line-height: 20px;
+                color: $GRAY_COOL_400;
+              }
+            }
+          }
+        }
+
+        button {
+          min-width: 400px;
+          background-color: $GRAY_COOL_900;
+          color: $MAIN_WHITE;
+          border-radius: 0.5rem;
+          font-size: 20px;
+          line-height: 30px;
+          @media screen and (max-width: $mobile) {
+            min-width: 100%;
+            font-size: 16px;
+            line-height: 24px;
+          }
+        }
+      }
+    }
+  }
+}

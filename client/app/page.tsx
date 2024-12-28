@@ -8,7 +8,7 @@ import Sale from "@/components/Home/Sale/Sale";
 import Arrivals from "@/components/Home/Arrivals/Arrivals";
 import Budget from "@/components/Home/Budget/Budget";
 import Category from "@/components/Home/Category/Category";
-import Newsletter from "@/components/Home/Newsletter/Newsletter";
+import Newsletter from "@/components/Newsletter/Newsletter";
 
 const Homepage = () => {
   return (

@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/image"; // Next
 import styles from "./page.module.scss"; // SCSS
 
 // fontawesome
@@ -7,6 +7,7 @@ import { faCopy } from "@fortawesome/free-regular-svg-icons";
 
 // components
 import Button from "@/components/Button/Button";
+import Newsletter from "@/components/Newsletter/Newsletter";
 
 const OrderConfirm = () => {
   return (
@@ -31,6 +32,7 @@ const OrderConfirm = () => {
           <Button text="Track your order" />
         </div>
       </div>
+      <Newsletter />
     </div>
   );
 };

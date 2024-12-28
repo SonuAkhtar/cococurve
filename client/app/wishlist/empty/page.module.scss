@@ -1,0 +1,58 @@
+@use "../../../app/variables" as *;
+
+.container {
+  width: 100%;
+  height: 100%;
+  margin-top: 76px;
+  background-color: $MAIN_WHITE;
+
+  .wrapper {
+    height: 100%;
+    width: 100%;
+    padding: 2.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media screen and (max-width: $tablet) {
+      padding: 1.5rem 1rem;
+    }
+
+    img {
+      display: block;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .wishlist_box {
+      width: 70%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2.5rem;
+      @media screen and (max-width: $tablet) {
+        width: 100%;
+      }
+
+      .wishlist_image {
+        height: 600px;
+        width: 300px;
+      }
+
+      h1 {
+        font-family: "thiccboi-semiBold", sans-serif;
+        width: 60%;
+        font-size: 40px;
+        line-height: 48px;
+        letter-spacing: -0.04em;
+        @media screen and (max-width: $tablet) {
+          font-size: 30px;
+          line-height: 40px;
+
+          width: 100%;
+        }
+      }
+    }
+  }
+}

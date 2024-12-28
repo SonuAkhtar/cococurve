@@ -86,6 +86,28 @@ export interface MenuCategoryType {
   trends: menuCategoryItem[];
 }
 
+export interface paymentMethodType {
+  id: number;
+  image: string;
+  name: string;
+  value: string;
+  info?: string;
+}
+
+export interface userAddressType {
+  id: number;
+  name: string;
+  phone: string;
+  email: string;
+  addressLine1: string;
+  addressLine2: string;
+  addressLine3: string;
+  city: string;
+  state: string;
+  country: string;
+  pincode: string;
+}
+
 // ----- Below are the Props type for components/pages -----
 export interface bannerPropsType {
   text: string;
@@ -107,4 +129,17 @@ export interface desktopMenuPropsType {
 
 export interface mobileMenuPropsType {
   showMobileMenu: boolean;
+}
+
+export interface paymentCardPropsType {
+  paymentMethod: string;
+  setPaymentMethod: (paymentMethod: string) => void;
+  data: paymentMethodType;
+}
+
+// Redux Types
+export interface RootStateType {
+  delivery: {
+    addressAdded: boolean;
+  };
 }

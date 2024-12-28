@@ -38,11 +38,31 @@ $YELLOW_900: #713b12;
 
 // ERROR
 $ERROR_50: #fef3f2;
+$ERROR_500: #f04438;
 
 // SUCCESS
+$SUCCESS_25: #f6fef9;
+$SUCCESS_300: #6ce9a6;
 $SUCCESS_200: #a6f4c5;
 $SUCCESS_500: #ecfdf3;
+$SUCCESS_800: #05603a;
 $SUCCESS_900: #054f31;
+
+// BLUE
+$BLUE_600: #1570ef;
+$BLUE_50: #eff8ff;
+
+// PURPLE
+$PURPLE_500: #7a5af8;
+
+// PRIMARY
+$PRIMARY_600: #7f56d9;
+
+// GREEN
+$GREEN_DARK: #359f92;
+
+// Navbar Height
+$NAVBAR_HEIGHT: 76px;
 
 // breakpoints
 $small-mobile: 430px;
@@ -50,13 +70,3 @@ $mobile: 600px;
 $tablet: 768px;
 $desktop: 1200px;
 $large-desktop: 1440px;
-
-// BLUE
-$BLUE_600: #1570ef;
-$BLUE_50: #eff8ff;
-
-// GREEN
-$GREEN_DARK: #359f92;
-
-// Navbar Height
-$NAVBAR_HEIGHT: 76px;
