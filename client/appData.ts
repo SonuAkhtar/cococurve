@@ -7,9 +7,14 @@ import {
   MenuCategoryType,
   MenuListType,
   newCollectionType,
+  paymentMethodType,
   SaleType,
   SectionType,
+  userAddressType,
 } from "./types";
+
+export const bannerText: string =
+  "USE FIRST15 TO GET 15% DISCOUNT ON YOUR FIRST ORDER";
 
 export const heroData: HeroType = {
   id: 1,
@@ -587,3 +592,60 @@ export const menMenuData: MenuListType = {
     },
   ],
 };
+
+export const paymentMethodData: paymentMethodType[] = [
+  {
+    id: 1,
+    image: "/Images/delivery/payment/delivery-payment-1.png",
+    name: "UPI",
+    value: "upi",
+  },
+  {
+    id: 2,
+    image: "/Images/delivery/payment/delivery-payment-2.png",
+    name: "Razorpay",
+    value: "razorpay",
+  },
+  {
+    id: 3,
+    image: "/Images/delivery/payment/delivery-payment-3.png",
+    name: "Netbanking",
+    value: "netbanking",
+  },
+  {
+    id: 4,
+    image: "/Images/delivery/payment/delivery-payment-4.png",
+    name: "Cash on delivery",
+    value: "cod",
+    info: "This will cost you additional INR 200*",
+  },
+];
+
+export const userAddressData: userAddressType[] = [
+  {
+    id: 1,
+    name: "Rahul Sharma",
+    phone: "+91-9876543210",
+    email: "rahulsharma@gmail.com",
+    addressLine1: "House no. 30",
+    addressLine2: "Street no. 54",
+    addressLine3: "Near public school",
+    city: "Gurgaon",
+    state: "Haryana",
+    country: "India",
+    pincode: "122331",
+  },
+  {
+    id: 2,
+    name: "Rahul verma",
+    phone: "+91-9876543210",
+    email: "rahulvarma@gmail.com",
+    addressLine1: "House no. 40",
+    addressLine2: "Street no. 44",
+    addressLine3: "Near public school",
+    city: "Noida",
+    state: "Uttar Pradesh",
+    country: "India",
+    pincode: "123456",
+  },
+];
