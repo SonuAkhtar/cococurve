@@ -137,6 +137,20 @@ export interface paymentCardPropsType {
   data: paymentMethodType;
 }
 
+export interface addressCardPropsType {
+  id: number;
+  name: string;
+  phone: string;
+  email: string;
+  addressLine1: string;
+  addressLine2: string;
+  addressLine3: string;
+  city: string;
+  state: string;
+  country: string;
+  pincode: string;
+}
+
 // Redux Types
 export interface RootStateType {
   delivery: {

@@ -9,7 +9,7 @@ import type { Metadata } from "next";
 import { bannerText } from "@/appData"; //appData
 
 // components
-import { StoreProvider } from "@/redux/storeProvider";
+import { StoreProvider } from "@/redux/StoreProvider";
 import Banner from "@/components/Banner/Banner";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
