@@ -72,10 +72,20 @@ const DeliveryPayment = () => {
                   <span>INR</span> 425
                 </h3>
               </div>
+              <div
+                className={`${styles.payment_summery_box_item} ${styles.coupon_area}`}
+              >
+                <span className={styles.name}>Coupon Code</span>
+                <form className={`${styles.coupon_input_form}`}>
+                  <input type="text" placeholder="Enter a coupon code" />
+                  <button type="submit">Submit</button>
+                </form>
+              </div>
               <div className={styles.payment_summery_box_item}>
                 <span className={styles.name}>Amount Payable</span>
                 <h3>
-                  <span>INR</span> 1,200
+                  <span>INR </span>
+                  <span className={styles.payableAmount}>1,265</span>
                 </h3>
               </div>
             </div>

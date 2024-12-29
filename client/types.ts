@@ -99,6 +99,19 @@ export interface userAddressCardType {
   country: string;
   pincode: string;
 }
+
+export interface userAddressInputType {
+  name: string;
+  phone: string;
+  email: string;
+  addressLine1: string;
+  addressLine2: string;
+  addressLine3: string;
+  city: string;
+  state: string;
+  country: string;
+  pincode: string;
+}
 // Components Type -----Start-----
 
 // Navbar Menu Type -----Start-----

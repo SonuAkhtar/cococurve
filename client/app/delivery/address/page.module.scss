@@ -121,6 +121,88 @@
         line-height: 20px;
         letter-spacing: 0.08em;
       }
+
+      .address_new {
+        background-color: $MAIN_WHITE;
+        padding: 2.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+        border: 1px solid $GRAY_COOL_200;
+        border-radius: 0.25rem;
+        @media screen and (max-width: $tablet) {
+          padding: 1.5rem 1rem;
+          gap: 1.5rem;
+        }
+
+        .address_new_personal_title,
+        .address_new_details_title {
+          font-family: "thiccboi-semiBold", sans-serif;
+          font-size: 14px;
+          line-height: 20px;
+          letter-spacing: 0.08em;
+          color: $PRIMARY_600;
+          margin-bottom: 0.5rem;
+        }
+
+        .input_box {
+          display: flex;
+          flex-direction: column;
+          gap: 0.25rem;
+
+          label {
+            font-family: "thiccboi-semiBold", sans-serif;
+            font-size: 16px;
+            line-height: 24px;
+          }
+
+          input {
+            padding: 1rem;
+            outline: none;
+            border: 1px solid $GRAY_COOL_200;
+            border-radius: 0.25rem;
+          }
+        }
+
+        .multiple_input_box {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .input_box {
+            width: 48%;
+          }
+        }
+
+        form {
+          display: flex;
+          flex-direction: column;
+          gap: 2.5rem;
+
+          .address_new_personal,
+          .address_new_details {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding-bottom: 2.5rem;
+            border-bottom: 1px solid $GRAY_COOL_200;
+          }
+
+          button {
+            width: 70%;
+            margin: 0 auto;
+            outline: none;
+            border: none;
+            font-family: "thiccboi-semiBold", sans-serif;
+            font-size: 16px;
+            line-height: 24px;
+            background-color: $GRAY_COOL_900;
+            color: $MAIN_WHITE;
+            padding: 0.75rem;
+            border-radius: 0.25rem;
+            cursor: pointer;
+          }
+        }
+      }
     }
   }
 }
