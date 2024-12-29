@@ -1,11 +1,12 @@
 "use client";
 
-// Next
+import { useEffect, useState } from "react"; // react
+
+//NEXT
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 
-import { useEffect, useState } from "react"; // react
 import styles from "./navbar.module.scss"; // SCSS
 import { menuCategoryList } from "@/appData"; // appData
 

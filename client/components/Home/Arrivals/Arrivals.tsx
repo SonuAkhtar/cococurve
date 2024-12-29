@@ -1,12 +1,23 @@
+"use client";
+
+//NEXT
 import Link from "next/link";
 import Image from "next/image";
 
 import styles from "./arrivals.module.scss"; // SCSS
-import { arrivalsData } from "@/appData"; // appData
+import useFetchData from "@/utils/useFetchData"; // customHook
+import { ApiRespDataType } from "@/types"; // type
 
 // component
 
 const Arrivals = () => {
+  // fetch API data
+  const { data, loadingData } = useFetchData("/data/appData.json");
+  if (!data) return null;
+  const { arrivalsData } = data as ApiRespDataType;
+
+  if (loadingData) return <div>Loading data...</div>;
+
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>

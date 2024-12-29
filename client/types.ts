@@ -1,3 +1,23 @@
+// API Response Data Type -----Start-----
+export interface ApiRespDataType {
+  heroData: HeroType;
+  sectionData: SectionType[];
+  saleData: SaleType[];
+  newCollectionData: newCollectionType[];
+  arrivalsData: arrivalsType;
+  budgetData: BudgetType[];
+  categoryData: CategoryType[];
+  paymentMethodData: paymentMethodType[];
+  userAddressCardData: userAddressCardType[];
+  bannerData: BannerType;
+  menuCategoryList: MenuCategoryType;
+}
+// API Response Data Type -----End-----
+
+// Components Type -----Start-----
+export interface BannerType {
+  bannerText: string;
+}
 export interface HeroType {
   id: number;
   desktopImage: string;
@@ -7,14 +27,6 @@ export interface HeroType {
 }
 
 export interface SectionType {
-  id: number;
-  href: string;
-  desktopImage: string;
-  mobileImage: string;
-  altText: string;
-}
-
-export interface CategoryType {
   id: number;
   href: string;
   desktopImage: string;
@@ -58,6 +70,38 @@ export interface BudgetType {
   off: string;
 }
 
+export interface CategoryType {
+  id: number;
+  href: string;
+  desktopImage: string;
+  mobileImage: string;
+  altText: string;
+}
+
+export interface paymentMethodType {
+  id: number;
+  image: string;
+  name: string;
+  value: string;
+  info?: string;
+}
+
+export interface userAddressCardType {
+  id: number;
+  name: string;
+  phone: string;
+  email: string;
+  addressLine1: string;
+  addressLine2: string;
+  addressLine3: string;
+  city: string;
+  state: string;
+  country: string;
+  pincode: string;
+}
+// Components Type -----Start-----
+
+// Navbar Menu Type -----Start-----
 export interface menuItem {
   id: number;
   name: string;
@@ -85,30 +129,9 @@ export interface MenuCategoryType {
   men: menuCategoryItem[];
   trends: menuCategoryItem[];
 }
+// Navbar Menu Type -----Start-----
 
-export interface paymentMethodType {
-  id: number;
-  image: string;
-  name: string;
-  value: string;
-  info?: string;
-}
-
-export interface userAddressType {
-  id: number;
-  name: string;
-  phone: string;
-  email: string;
-  addressLine1: string;
-  addressLine2: string;
-  addressLine3: string;
-  city: string;
-  state: string;
-  country: string;
-  pincode: string;
-}
-
-// ----- Below are the Props type for components/pages -----
+// components/pages Props Type -----Start-----
 export interface bannerPropsType {
   text: string;
 }
@@ -150,10 +173,12 @@ export interface addressCardPropsType {
   country: string;
   pincode: string;
 }
+// components/pages Props Type -----Start-----
 
-// Redux Types
+// Redux Type -----Start-----
 export interface RootStateType {
   delivery: {
     addressAdded: boolean;
   };
 }
+// Redux Type -----End-----

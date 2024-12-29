@@ -1,5 +1,8 @@
+"use client";
+
 import styles from "./budget.module.scss"; //SCSS
-import { budgetData } from "@/appData"; // appData
+import useFetchData from "@/utils/useFetchData"; // customHook
+import { ApiRespDataType } from "@/types"; // type
 
 // component
 import Button from "@/components/Button/Button";
@@ -7,6 +10,13 @@ import BudgetCard from "./BudgetCard/BudgetCard";
 import MarqueeComp from "@/components/MarqueeComp/MarqueeComp";
 
 const Budget = () => {
+  // fetch API data
+  const { data, loadingData } = useFetchData("/data/appData.json");
+  if (!data) return null;
+  const { budgetData } = data as ApiRespDataType;
+
+  if (loadingData) return <div>Loading data...</div>;
+
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>

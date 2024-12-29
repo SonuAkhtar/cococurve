@@ -1,18 +1,20 @@
 "use client";
 
 import styles from "./page.module.scss"; // SCSS
-import { userAddressData } from "@/appData"; // appData
-import { useSelector } from "react-redux"; // redux
-import { RootStateType } from "@/types"; // Redux-type
+import useFetchData from "@/utils/useFetchData"; // customHook
+import { ApiRespDataType } from "@/types"; // type
 
 // components
 import Newsletter from "@/components/Newsletter/Newsletter";
 import AddressCard from "@/components/AddressCard/AddressCard";
 
 const DeliveryAddress = () => {
-  const addressStatus = useSelector(
-    (state: RootStateType) => state.delivery.addressAdded
-  );
+  // fetch API data
+  const { data, loadingData } = useFetchData("/data/appData.json");
+  if (!data) return null;
+  const { userAddressCardData } = data as ApiRespDataType;
+
+  if (loadingData) return <div>Loading data...</div>;
 
   return (
     <div className={styles.container}>
@@ -25,7 +27,7 @@ const DeliveryAddress = () => {
           <div className={styles.address_recent}>
             <h3 className={styles.address_recent_title}>RECENT ADDRESSES</h3>
             <div className={styles.address_recent_list}>
-              {userAddressData.map((data) => (
+              {userAddressCardData.map((data) => (
                 <AddressCard
                   key={data.id}
                   id={data.id}

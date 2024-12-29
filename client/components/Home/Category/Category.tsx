@@ -1,10 +1,21 @@
+"use client";
+
+//NEXT
 import Link from "next/link";
 import Image from "next/image";
 
 import styles from "./category.module.scss"; //SCSS
-import { categoryData } from "@/appData"; // appData
+import useFetchData from "@/utils/useFetchData"; // customHook
+import { ApiRespDataType } from "@/types"; // type
 
 const Category = () => {
+  // fetch API data
+  const { data, loadingData } = useFetchData("/data/appData.json");
+  if (!data) return null;
+  const { categoryData } = data as ApiRespDataType;
+
+  if (loadingData) return <div>Loading data...</div>;
+
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>

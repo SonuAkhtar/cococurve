@@ -4,9 +4,7 @@ import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false;
 
 import "./globals.css"; // CSS
-import type { Metadata } from "next";
-
-import { bannerText } from "@/appData"; //appData
+import type { Metadata } from "next"; // Next
 
 // components
 import { StoreProvider } from "@/redux/StoreProvider";
@@ -36,7 +34,7 @@ export default function RootLayout({
     <StoreProvider>
       <html lang="en">
         <body>
-          <Banner text={bannerText} />
+          <Banner text="USE FIRST15 TO GET 15% DISCOUNT ON YOUR FIRST ORDER" />
 
           <Navbar />
           {children}

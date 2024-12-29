@@ -1,7 +1,8 @@
 "use client";
 
 import styles from "./sale.module.scss"; // SCSS
-import { saleData } from "@/appData"; // appData
+import useFetchData from "@/utils/useFetchData"; // customHook
+import { ApiRespDataType } from "@/types"; // type
 
 // component
 import Button from "@/components/Button/Button";
@@ -9,6 +10,13 @@ import SaleCard from "./SaleCard/SaleCard";
 import MarqueeComp from "@/components/MarqueeComp/MarqueeComp";
 
 const Sale = () => {
+  // fetch API data
+  const { data, loadingData } = useFetchData("/data/appData.json");
+  if (!data) return null;
+  const { saleData } = data as ApiRespDataType;
+
+  if (loadingData) return <div>Loading data...</div>;
+
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
