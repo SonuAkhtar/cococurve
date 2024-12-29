@@ -10,18 +10,18 @@ import Newsletter from "@/components/Newsletter/Newsletter";
 import AddressCard from "@/components/AddressCard/AddressCard";
 
 const DeliveryAddress = () => {
-  const [addressValue, setAddressValue] = useState<userAddressInputType>({
-    name: "",
-    phone: "",
-    email: "",
-    addressLine1: "",
-    addressLine2: "",
-    addressLine3: "",
-    city: "",
-    state: "",
-    country: "",
-    pincode: "",
-  });
+  // const [addressValue, setAddressValue] = useState<userAddressInputType>({
+  //   name: "",
+  //   phone: "",
+  //   email: "",
+  //   addressLine1: "",
+  //   addressLine2: "",
+  //   addressLine3: "",
+  //   city: "",
+  //   state: "",
+  //   country: "",
+  //   pincode: "",
+  // });
 
   // fetch API data
   const { data, loadingData } = useFetchData("/data/appData.json");
