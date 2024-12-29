@@ -1,9 +1,10 @@
 "use client";
 
-import { useState } from "react"; // React
+//import { useState } from "react"; // React
 import styles from "./page.module.scss"; // SCSS
 import useFetchData from "@/utils/useFetchData"; // customHook
-import { ApiRespDataType, userAddressInputType } from "@/types"; // type
+import { ApiRespDataType } from "@/types"; // type
+//import { userAddressInputType } from "@/types"; // type
 
 // components
 import Newsletter from "@/components/Newsletter/Newsletter";
