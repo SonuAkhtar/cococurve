@@ -2,8 +2,6 @@
 
 import { useState } from "react"; // React
 import styles from "./page.module.scss"; // SCSS
-import { useSelector } from "react-redux"; // redux
-import { RootStateType } from "@/types"; // Redux-type
 
 import useFetchData from "@/utils/useFetchData"; // customHook
 import { ApiRespDataType } from "@/types"; // type
@@ -15,9 +13,6 @@ import PaymentCard from "@/components/PaymentCard/PaymentCard";
 
 const DeliveryPayment = () => {
   const [paymentMethod, setPaymentMethod] = useState<string>("");
-  // const addressStatus = useSelector(
-  //   (state: RootStateType) => state.delivery.addressAdded
-  // );
 
   // fetch API data
   const { data, loadingData } = useFetchData("/data/appData.json");
